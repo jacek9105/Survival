@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f0895f19350c71b478521aa0eb7a4f4b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Premier Sans
+  fontNames:
+  - Premier Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 08e02221d8357294cb014532b599efdf, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
