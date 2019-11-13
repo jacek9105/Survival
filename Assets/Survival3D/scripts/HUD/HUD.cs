@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
+    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController Fpsc;
+    bool decreaseStamina;
 
     public float maxHP;
     public float actualHP;
@@ -23,6 +25,8 @@ public class HUD : MonoBehaviour
     public GameObject staminaBar;
     void Start()
     {
+        decreaseStamina = false;
+
         maxHP = 100;
         maxHunger = 100;
         maxDesire = 100;
@@ -34,7 +38,7 @@ public class HUD : MonoBehaviour
         actualStamina = 100;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         hpBar.transform.localScale = new Vector3(actualHP / maxHP, 1, 0);
@@ -42,17 +46,10 @@ public class HUD : MonoBehaviour
         hungerBar.transform.localScale = new Vector3(actualHunger / maxHunger, 1, 0);
         staminaBar.transform.localScale = new Vector3(actualStamina / maxStamina, 1, 0);
 
-        actualDesire -= 1 * Time.deltaTime;
-        actualHunger -= 1 * Time.deltaTime;
+        actualDesire -= 0.1f * Time.deltaTime;
+        actualHunger -= 0.1f * Time.deltaTime;
 
-        if(actualStamina < maxStamina)
-        {
-            actualStamina += 1 * Time.deltaTime;
-        }
-        if(actualHP < maxHP)
-        {
-            actualHP += 1 * Time.deltaTime;
-        }
+      
 
         if (actualStamina < 0)
         {
@@ -70,5 +67,41 @@ public class HUD : MonoBehaviour
         {
             actualDesire = 0;
         }
+
+
+
+        if(actualDesire < 5 || actualHunger < 5)
+        {
+            actualHP -= 0.1f * Time.deltaTime;
+        }
+        else if(actualHP < maxHP)
+        {
+            actualHP += 1 * Time.deltaTime;
+        }
+
+
+        
+        if (Fpsc.m_IsWalking == false)
+        {
+            actualStamina -= 1 * Time.deltaTime;
+        }
+            else if (actualStamina < maxStamina)
+            {
+            actualStamina += 1 * Time.deltaTime;
+            }
+
+        if (Fpsc.m_Jumping == true && decreaseStamina == false)
+        {
+            decreaseStamina = true;
+            actualStamina = actualStamina - 5;
+        }
+            else if(Fpsc.m_Jumping == false)
+            {
+            decreaseStamina = false;
+            }
+                else if(actualStamina < maxStamina)
+                { 
+                actualStamina += 1 * Time.deltaTime;
+                }
     }
 }

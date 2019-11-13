@@ -1237,6 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5439ca21ebe214382e7876dee88747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fpsc: {fileID: 1379318606}
   maxHP: 0
   actualHP: 0
   maxDesire: 0
@@ -1249,6 +1250,18 @@ MonoBehaviour:
   desireBar: {fileID: 1869978859}
   hungerBar: {fileID: 1787767749}
   staminaBar: {fileID: 160328478}
+--- !u!114 &1379318606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1517472983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379318602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1466776588
 PrefabInstance:
   m_ObjectHideFlags: 0
