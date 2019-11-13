@@ -79,6 +79,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Survival3D\scripts\AI\enemyAI.cs" />
+    <Compile Include="Assets\Survival3D\scripts\DayNightCycle\DayNightCycle.cs" />
     <Compile Include="Assets\Survival3D\scripts\equipment\Database.cs" />
     <Compile Include="Assets\Survival3D\scripts\equipment\Object.cs" />
     <Compile Include="Assets\Survival3D\scripts\HUD\HUD.cs" />

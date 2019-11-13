@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 43.2
+    y: 50.4
     width: 1536
     height: 780.8
   m_ShowMode: 4
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 30
+  controlID: 103
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,7 +160,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1225
-    height: 455
+    height: 418
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
@@ -183,9 +183,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 302
-    height: 455
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 418
+  m_MinSize: {x: 202, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -209,16 +209,16 @@ MonoBehaviour:
     x: 302
     y: 0
     width: 923
-    height: 455
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 418
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
   - {fileID: 15}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,9 +235,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 455
+    y: 418
     width: 1225
-    height: 276
+    height: 313
   m_MinSize: {x: 232, y: 272}
   m_MaxSize: {x: 10002, y: 10022}
   m_ActualView: {fileID: 16}
@@ -294,9 +294,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 302.4
-    y: 73.6
+    y: 80.8
     width: 921
-    height: 436
+    height: 399
   m_ViewDataDictionary: {fileID: 0}
   m_VSyncEnabled: 0
   m_MaximizeOnPlay: 0
@@ -311,8 +311,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -368.4
     m_HBaseRangeMax: 368.4
-    m_VBaseRangeMin: -167.6
-    m_VBaseRangeMax: 167.6
+    m_VBaseRangeMin: -152.8
+    m_VBaseRangeMax: 152.8
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -331,24 +331,24 @@ MonoBehaviour:
       x: 0
       y: 17
       width: 921
-      height: 419
-    m_Scale: {x: 1.2189754, y: 1.2189754}
-    m_Translation: {x: 460.5, y: 209.5}
+      height: 382
+    m_Scale: {x: 1.1592739, y: 1.1592739}
+    m_Translation: {x: 460.5, y: 190.99998}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -377.77628
-      y: -171.86565
-      width: 755.55255
-      height: 343.7313
+      x: -397.2314
+      y: -164.7583
+      width: 794.4628
+      height: 329.5166
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1151.25, y: 545}
+  m_LastWindowPixelSize: {x: 1151.25, y: 498.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -375,15 +375,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 73.6
+    y: 80.8
     width: 302
-    height: 436
+    height: 399
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14430000
-      m_LastClickedID: 17172
+      m_SelectedIDs: e0420000
+      m_LastClickedID: 17120
       m_ExpandedIDs: 5afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -444,9 +444,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 579.3094, y: 152.18433, z: -165.20297}
+    m_Target: {x: 742.2783, y: 194.19223, z: -76.66821}
     speed: 2
-    m_Value: {x: 579.3094, y: 152.18433, z: -165.20297}
+    m_Value: {x: 742.2783, y: 194.19223, z: -76.66821}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -475,9 +475,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.04199403, y: -0.28290072, z: 0.012398286, w: 0.95815086}
+    m_Target: {x: -0.07125087, y: -0.103645064, z: -0.007445399, w: 0.99203384}
     speed: 2
-    m_Value: {x: 0.04199397, y: -0.28290027, z: 0.012398266, w: 0.9581494}
+    m_Value: {x: -0.07125068, y: -0.10364478, z: -0.0074453787, w: 0.9920311}
   m_Size:
     m_Target: 193.79881
     speed: 2
@@ -555,9 +555,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 528
+    y: 498.4
     width: 1225
-    height: 257
+    height: 294
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -572,20 +572,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Survival3D/scripts/HUD
+    - Assets/Survival3D/scripts/DayNightCycle
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Survival3D/scripts/HUD
+  - Assets/Survival3D/scripts/DayNightCycle
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\GIT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 451}
-    m_SelectedIDs: 18400000
-    m_LastClickedID: 16408
-    m_ExpandedIDs: 000000006a30000066310000983100009c310000b83100001a32000048330000d63500009e360000043700006e38000074380000a63900000a3a0000723a00004a3b00009e3b0000223c0000863c0000de3c00003c3d0000643d000000ca9a3b
+    scrollPos: {x: 0, y: 430}
+    m_SelectedIDs: 0e450000
+    m_LastClickedID: 17678
+    m_ExpandedIDs: 000000006a300000663100009c310000b83100001a32000048330000d63500009e360000043700006e38000074380000a63900000a3a0000723a00004a3b00009e3b0000223c0000863c0000de3c00003c3d0000643d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -657,7 +657,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 9}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1224.8
-    y: 73.6
+    y: 80.8
     width: 309
     height: 712
   m_ViewDataDictionary: {fileID: 0}
