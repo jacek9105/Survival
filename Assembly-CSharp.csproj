@@ -82,6 +82,8 @@
     <Compile Include="Assets\Survival3D\scripts\AI\enemyAI.cs" />
     <Compile Include="Assets\Survival3D\scripts\DayNightCycle\DayNightCycle.cs" />
     <Compile Include="Assets\Survival3D\scripts\equipment\Database.cs" />
+    <Compile Include="Assets\Survival3D\scripts\equipment\equipment.cs" />
+    <Compile Include="Assets\Survival3D\scripts\equipment\itemToLift.cs" />
     <Compile Include="Assets\Survival3D\scripts\equipment\Object.cs" />
     <Compile Include="Assets\Survival3D\scripts\equipment\pickingUpItem.cs" />
     <Compile Include="Assets\Survival3D\scripts\HUD\HUD.cs" />

@@ -7,6 +7,10 @@ public class pickingUpItem : MonoBehaviour
     public GameObject itemToPick;
     public GUISkin skin;
     bool canLift;
+
+    int idItem;
+
+    public equipment equipment;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +24,18 @@ public class pickingUpItem : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Destroy(itemToPick);
-                itemToPick = null;
+                idItem = itemToPick.GetComponent<itemToLift>().id;
+                for (int i = 0; i < equipment.listOwnedItem.Count; i++)
+                {
+                    if (equipment.listOwnedItem[i].id == 0 && itemToPick != null)
+                    {
+                        equipment.listOwnedItem[i] = Database.itemList[idItem];
+                        Destroy(itemToPick);
+                        itemToPick = null;
+                    }
+                    
+                }
+                canLift = false;
             }
         }
         
