@@ -1999,6 +1999,94 @@ MonoBehaviour:
   desireBar: {fileID: 1869978859}
   hungerBar: {fileID: 1787767749}
   staminaBar: {fileID: 160328478}
+--- !u!114 &1379318604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379318602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d1677b55c3a21499860d803641c9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToPick: {fileID: 0}
+  skin: {fileID: 11400000, guid: 2dd1774af20fa3c4b8a93fd2b004dd8c, type: 2}
+  equipment: {fileID: 1379318605}
+--- !u!114 &1379318605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379318602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b922d9094da03fa4a965461bb06b7073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOwnedItem:
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
+  - id: 0
+    name: 
+    description: 
 --- !u!114 &1379318606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -2053,17 +2141,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe
       objectReference: {fileID: 0}
+    - target: {fileID: 1164328234615206, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
+      propertyPath: m_TagString
+      value: itemToPick
+      objectReference: {fileID: 0}
     - target: {fileID: 4045817768345548, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1721
       objectReference: {fileID: 0}
     - target: {fileID: 4045817768345548, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 68.018
+      value: 69.339
       objectReference: {fileID: 0}
     - target: {fileID: 4045817768345548, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 359
+      value: 345
       objectReference: {fileID: 0}
     - target: {fileID: 4045817768345548, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2486,7 +2578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539180575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1660, y: 78.41, z: 443}
+  m_LocalPosition: {x: 1676, y: 78.41, z: 277}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1689490037}
@@ -2666,7 +2758,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464e59bb2f0eedd4c995c3556edf6cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemList: []
+--- !u!114 &1647610855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647610853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d6a63f5d0741d4db1ffd85dcfc0fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+--- !u!65 &1647610856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647610853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.8, z: 0.5}
+  m_Center: {x: 0.01253456, y: -0.0000000055879354, z: 0}
 --- !u!4 &1653660523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4611891048765607417, guid: fc3266ce66cdd0c4db180f87ed3be8cc,
