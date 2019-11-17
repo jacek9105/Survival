@@ -8,6 +8,8 @@ public class Object
     public int id;
     public string name;
     public string description;
+    public Texture2D objectIcons;
+
 
     public Object()
     {
@@ -19,6 +21,7 @@ public class Object
         id = Id;
         name = Name;
         description = Description;
-    }
+        objectIcons = Resources.Load<Texture2D>("Icons/" + name);
+    } 
 
 }
