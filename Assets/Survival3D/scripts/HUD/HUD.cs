@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class HUD : MonoBehaviour
 {
@@ -103,5 +104,13 @@ public class HUD : MonoBehaviour
                 { 
                 actualStamina += 1 * Time.deltaTime;
                 }
+
+
+
+        if (actualHP <=0)
+        {
+            Destroy(gameObject);
+            // Matt dodaj okienko które pozwloić kliknąć koniec gry czy coś takiego i wróci do ekranu pierwszego.
+        }
     }
 }
