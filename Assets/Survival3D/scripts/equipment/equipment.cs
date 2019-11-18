@@ -40,13 +40,36 @@ public class equipment : MonoBehaviour
 
     void viewInventory()
     {
+        int i = 0;
+
         for(int x=0; x<numberSocketsX; x++)
         {
             for(int y=0; y<numberSocketsY; y++)
             {
                 Rect slotLocation = new Rect(Screen.width * 0.05f + (x * Screen.width * 0.075f), Screen.height * 0.05f + (y * Screen.height * 0.13f), Screen.width * 0.07f, Screen.height * 0.13f);
                 GUI.Box(slotLocation, "", skin.GetStyle("slotEkwipunku"));
+
+                if(listOwnedItem[i].id != 0)
+                {
+                    GUI.DrawTexture(slotLocation, listOwnedItem[i].objectIcons);
+                }
+
+                if(slotLocation.Contains(Event.current.mousePosition)  && Input.GetMouseButtonUp(0))
+                {
+                    useObject(listOwnedItem[i].id, i, true);
+                }
+                i++;
             } 
+        }
+
+    }
+
+    void useObject(int id, int slotNumber, bool didDelete)
+    {
+
+        if (didDelete)
+        {
+            listOwnedItem[slotNumber] = new Object();
         }
 
     }
