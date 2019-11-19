@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8584078609570766800}
   - component: {fileID: 8600687788769165458}
   - component: {fileID: 8609444539392103186}
-  - component: {fileID: 8537902738656101712}
   m_Layer: 0
   m_Name: axeDoAnimacji
   m_TagString: Untagged
@@ -79,22 +78,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!95 &8537902738656101712
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8586881620920066490}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 9f1810da5391ad942b0710778d90f7d2, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
