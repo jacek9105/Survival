@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 299
+  controlID: 229
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 224
+  controlID: 177
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 225
+  controlID: 236
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -350,7 +350,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b8310000
     m_LastClickedID: 12728
-    m_ExpandedIDs: 00000000ae300000f23100000e32000076330000c6330000a43600008e37000006380000a2390000e83a0000543b0000ce3b0000263c0000ae3c0000063d0000b63d00002e3e00008c3e0000f23e0000263f0000be41000076420000c6480000c848000000ca9a3b
+    m_ExpandedIDs: 00000000ae300000f23100000e32000076330000c6330000a43600008e37000006380000a2390000e83a0000543b0000ce3b0000263c0000ae3c0000063d0000b63d00002e3e00008c3e0000f23e0000263f0000be41000076420000c4480000c648000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +378,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ae300000f23100000e32000076330000c6330000a43600008e37000006380000a2390000e83a0000543b0000ce3b0000263c0000ae3c0000063d0000b63d00002e3e00008c3e0000f23e0000263f0000be41000076420000c6480000c848000000ca9a3b
+    m_ExpandedIDs: 00000000ae300000f23100000e32000076330000c6330000a43600008e37000006380000a2390000e83a0000543b0000ce3b0000263c0000ae3c0000063d0000b63d00002e3e00008c3e0000f23e0000263f0000be41000076420000c4480000c648000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -526,7 +526,7 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-  m_WindowGUID: 619a853cecd7ff24f9d44d9ae78d68c9
+  m_WindowGUID: e2671383c0e5dbc43bc4b01b1b85f18d
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -554,7 +554,7 @@ MonoBehaviour:
     height: 554
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: f7d4f4d575d5c384e8087e97e2af6752
+  m_WindowGUID: 6a23c2900a9739449b2a826c300a2899
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
