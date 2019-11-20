@@ -7,6 +7,7 @@ public class Axe : MonoBehaviour
     public Animation anim;
     public bool hitAble;
     public bool hited;
+    public AudioSource chopSound;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class Axe : MonoBehaviour
         if (collider.tag == "Tree" && hited == true)
         {
             collider.gameObject.GetComponent<Tree_Felling>().TreeHP -= 1;
+            chopSound.Play();
         }
     }
 

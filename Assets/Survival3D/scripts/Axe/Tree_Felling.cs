@@ -6,6 +6,7 @@ public class Tree_Felling : MonoBehaviour
 {
     
     public int  TreeHP;
+    public Rigidbody rigidBody;
     void Start()
     {
         
@@ -16,7 +17,8 @@ public class Tree_Felling : MonoBehaviour
     {
         if(TreeHP <= 0)
         {
-            Destroy(this.gameObject);
+            rigidBody.isKinematic = false;
+            this.gameObject.tag = "Untagged";
         }
     }
 }
