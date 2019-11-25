@@ -2806,6 +2806,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: island_pig
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fd5367fe4c92a2b42bd0c83eb17c87ca,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -8537397826599673736, guid: fd5367fe4c92a2b42bd0c83eb17c87ca,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6286,6 +6291,11 @@ MonoBehaviour:
     description: 
     objectIcons: {fileID: 0}
   - id: 0
+    name: 
+    description: 
+    objectIcons: {fileID: 0}
+  objectDragg:
+    id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}

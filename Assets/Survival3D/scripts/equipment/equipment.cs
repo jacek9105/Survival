@@ -5,8 +5,10 @@ using UnityEngine;
 public class equipment : MonoBehaviour
 {
     public List<Object> listOwnedItem = new List<Object>();
+    public Object objectDragg;
 
     bool didViewInventory;
+    bool didObjectDragg;
     int numberSocketsX;
     int numberSocketsY;
 
@@ -36,6 +38,11 @@ public class equipment : MonoBehaviour
         {
             viewInventory();
         }
+
+        if (didObjectDragg == true)
+        {
+            GUI.DrawTexture(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, 50, 50), objectDragg.objectIcons);
+        }
     }
 
     void viewInventory()
@@ -53,12 +60,26 @@ public class equipment : MonoBehaviour
                 {
                     GUI.DrawTexture(slotLocation, listOwnedItem[i].objectIcons);
                 }
+                //Przenoszenie
+                if(slotLocation.Contains(Event.current.mousePosition)  && Event.current.type == EventType.MouseDrag && didObjectDragg == false)
+                {
+                    objectDragg = listOwnedItem[i];
+                    listOwnedItem[i] = new Object();
+                    didObjectDragg = true;
+                }
 
-                if(slotLocation.Contains(Event.current.mousePosition)  && Input.GetMouseButtonUp(0))
+                if (slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].id == 0)
+                {
+                    listOwnedItem[i] = objectDragg;
+                    didObjectDragg = false;
+                }
+
+                //usuwanie przedmiotów
+                if(slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(1))
                 {
                     useObject(listOwnedItem[i].id, i, true);
                 }
-                i++;
+                    i++;
             } 
         }
 
