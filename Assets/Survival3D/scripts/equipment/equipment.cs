@@ -11,6 +11,7 @@ public class equipment : MonoBehaviour
     bool didObjectDragg;
     int numberSocketsX;
     int numberSocketsY;
+    int previousSlot;
 
     public GUISkin skin;
     // Start is called before the first frame update
@@ -66,16 +67,23 @@ public class equipment : MonoBehaviour
                     objectDragg = listOwnedItem[i];
                     listOwnedItem[i] = new Object();
                     didObjectDragg = true;
+                    previousSlot = i;
                 }
 
-                if (slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].id == 0)
+                if (slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].id == 0 && didObjectDragg == true)
                 {
                     listOwnedItem[i] = objectDragg;
                     didObjectDragg = false;
                 }
 
+                if (slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].id > 0 && didObjectDragg == true)
+                {
+                    listOwnedItem[previousSlot] = listOwnedItem[i];
+                    listOwnedItem[i] = objectDragg;
+                    didObjectDragg = false;
+                }
                 //usuwanie przedmiotów
-                if(slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(1))
+                if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(1))
                 {
                     useObject(listOwnedItem[i].id, i, true);
                 }
