@@ -18,7 +18,7 @@ public class Tree_Felling : MonoBehaviour
         if(TreeHP <= 0)
         {
             rigidBody.isKinematic = false;
-            this.gameObject.tag = "Untagged";
+           
         }
     }
 }
