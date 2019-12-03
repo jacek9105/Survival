@@ -9,6 +9,9 @@ public class Object
     public string name;
     public string description;
     public Texture2D objectIcons;
+    public GameObject prefabObject;
+
+    public bool isWeapon;
 
 
     public Object()
@@ -16,12 +19,14 @@ public class Object
 
     }
 
-    public Object(int Id, string Name, string Description)
+    public Object(int Id, string Name, string Description, bool IsWeapon)
     {
         id = Id;
         name = Name;
         description = Description;
+        isWeapon = IsWeapon;
         objectIcons = Resources.Load<Texture2D>("Icons/" + name);
+        prefabObject = Resources.Load<GameObject>("Prefabs/" + name);
     } 
 
 }

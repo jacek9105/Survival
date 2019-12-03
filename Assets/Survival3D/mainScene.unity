@@ -2811,6 +2811,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 156747145930054512, guid: fd5367fe4c92a2b42bd0c83eb17c87ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8537397826599673736, guid: fd5367fe4c92a2b42bd0c83eb17c87ca,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2956,11 +2961,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6922793697723135513, guid: f67773857c9eb1248a00073f50018e49,
         type: 3}
-    - target: {fileID: 156747145930054512, guid: fd5367fe4c92a2b42bd0c83eb17c87ca,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2974464514541526857, guid: fd5367fe4c92a2b42bd0c83eb17c87ca,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6218,88 +6218,132 @@ MonoBehaviour:
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   - id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
   objectDragg:
     id: 0
     name: 
     description: 
     objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
+  FPSCon: {fileID: 1379318602}
   skin: {fileID: 11400000, guid: 16c32de33657f7e42a1f2e51bd969013, type: 2}
+  handPosition: {fileID: 478635516}
 --- !u!114 &1379318606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -10585,6 +10629,7 @@ MonoBehaviour:
   hitAble: 1
   hited: 0
   chopSound: {fileID: 1164327353781354}
+  equipment: {fileID: 0}
 --- !u!65 &1164327353781353
 BoxCollider:
   m_ObjectHideFlags: 0
