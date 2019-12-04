@@ -10585,6 +10585,7 @@ MonoBehaviour:
   hitAble: 1
   hited: 0
   chopSound: {fileID: 1164327353781354}
+  equipment: {fileID: 0}
 --- !u!65 &1164327353781353
 BoxCollider:
   m_ObjectHideFlags: 0
