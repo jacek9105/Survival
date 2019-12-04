@@ -13,7 +13,11 @@ public class equipment : MonoBehaviour
     int numberSocketsY;
     int previousSlot;
 
+    public GameObject FPSCon;
+
     public GUISkin skin;
+    public Transform handPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,7 +89,7 @@ public class equipment : MonoBehaviour
                 //usuwanie przedmiotów
                 if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(1))
                 {
-                    useObject(listOwnedItem[i].id, i, true);
+                    useObject(listOwnedItem[i].id, i, true, listOwnedItem[i].isWeapon);
                 }
                     i++;
             } 
@@ -93,9 +97,14 @@ public class equipment : MonoBehaviour
 
     }
 
-    void useObject(int id, int slotNumber, bool didDelete)
+    void useObject(int id, int slotNumber, bool didDelete, bool isWeapon)
     {
-
+        if (isWeapon == true)
+        {
+            GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
+            objekt.name = listOwnedItem[slotNumber].name;
+            objekt.transform.parent = FPSCon.transform;
+        }
         if (didDelete)
         {
             listOwnedItem[slotNumber] = new Object();
