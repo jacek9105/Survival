@@ -8,7 +8,7 @@ public class Axe : MonoBehaviour
     public bool hitAble;
     public bool hited;
     public AudioSource chopSound;
-    public equipment equipment;
+    public equipment eq;
 
     void Start()
     {
@@ -42,15 +42,14 @@ public class Axe : MonoBehaviour
             if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP >0)
             { 
             collider.gameObject.GetComponent<Tree_Felling>().TreeHP -= 1;
-            chopSound.Play();
             }
             if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP == 0)
             {
-                for(int i =0; i<equipment.listOwnedItem.Count; i++)
+                for(int i = 0; i<eq.listOwnedItem.Count; i++)
                 {
-                    if(equipment.listOwnedItem[i].id == 0)
+                    if(eq.listOwnedItem[i].id == 0)
                     {
-                        equipment.listOwnedItem[i] = Database.itemList[2];
+                        eq.listOwnedItem[i] = Database.itemList[2];
                         break;
                     }
                 }
