@@ -15,30 +15,15 @@ ScriptsOnlyBuild:
     - pickingUpItem
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.Experimental.TerrainAPI.BillowNoise
-    - UnityEditor.Experimental.TerrainAPI.BridgeTool
-    - UnityEditor.Experimental.TerrainAPI.CloneBrushTool
-    - UnityEditor.Experimental.TerrainAPI.ContrastTool
     - UnityEditor.Experimental.TerrainAPI.FbmFractalType
-    - UnityEditor.Experimental.TerrainAPI.MeshStampTool
     - UnityEditor.Experimental.TerrainAPI.NoiseBlitShaderGenerator
     - UnityEditor.Experimental.TerrainAPI.NoiseFillShaderGenerator
-    - UnityEditor.Experimental.TerrainAPI.NoiseHeightTool
     - UnityEditor.Experimental.TerrainAPI.NoneFractalType
-    - UnityEditor.Experimental.TerrainAPI.PaintHeightTool
-    - UnityEditor.Experimental.TerrainAPI.PaintTextureTool
     - UnityEditor.Experimental.TerrainAPI.PerlinNoise
     - UnityEditor.Experimental.TerrainAPI.RidgeNoise
-    - UnityEditor.Experimental.TerrainAPI.SetHeightTool
-    - UnityEditor.Experimental.TerrainAPI.SharpenPeaksTool
-    - UnityEditor.Experimental.TerrainAPI.SlopeFlattenTool
-    - UnityEditor.Experimental.TerrainAPI.SmoothHeightTool
-    - UnityEditor.Experimental.TerrainAPI.StampTool
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
-    - UnityEditor.Experimental.TerrainAPI.TerraceErosion
-    - UnityEditor.Experimental.TerrainAPI.ThermalErosionTool
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
-    - UnityEditor.Experimental.TerrainAPI.WindErosionTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -812,7 +797,7 @@ ScriptsOnlyBuild:
     className: FreeLookCam
   - hash:
       serializedVersion: 2
-      Hash: 825b06c4b6d61a5babecb45170d132c9
+      Hash: 6a6e741be9d7f0656506340042f24ed9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: equipment
@@ -1124,7 +1109,7 @@ ScriptsOnlyBuild:
     className: Explosive
   - hash:
       serializedVersion: 2
-      Hash: c5d9473c32498aea3efbaa4c1cb10de6
+      Hash: 07f65dacf06758ca2ecfcea0b89eb0b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Axe
@@ -1257,4 +1242,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Survival3D/mainScene.unity
-  playerPath: C:/Users/MATT/Desktop/Survival3D.exe
+  playerPath: F:/BUILD/Survival3D.exe
