@@ -64,6 +64,7 @@ public class equipment : MonoBehaviour
                 if(listOwnedItem[i].id != 0)
                 {
                     GUI.DrawTexture(slotLocation, listOwnedItem[i].objectIcons);
+                    GUI.Box(slotLocation, listOwnedItem[i].quantityInStack.ToString(), skin.GetStyle("QuantityInStack"));
                 }
                 //Przenoszenie
                 if(slotLocation.Contains(Event.current.mousePosition)  && Event.current.type == EventType.MouseDrag && didObjectDragg == false)

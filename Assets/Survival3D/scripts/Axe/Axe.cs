@@ -42,6 +42,7 @@ public class Axe : MonoBehaviour
             if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP >0)
             { 
             collider.gameObject.GetComponent<Tree_Felling>().TreeHP -= 1;
+                chopSound.Play();
             }
             if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP == 0)
             {
