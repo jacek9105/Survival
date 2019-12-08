@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - DayNightCycle
     - HUD
     - MenuUI
+    - Readme
     - Tree_Felling
     - enemyAI
     - equipment
@@ -83,45 +84,45 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 692}
+      Script: {instanceID: 700}
     - Class: 114
-      Script: {instanceID: 9798}
+      Script: {instanceID: 9806}
     - Class: 114
-      Script: {instanceID: 9810}
+      Script: {instanceID: 9818}
     - Class: 114
-      Script: {instanceID: 9906}
+      Script: {instanceID: 9914}
     - Class: 114
-      Script: {instanceID: 9996}
+      Script: {instanceID: 10004}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 10054}
     - Class: 114
-      Script: {instanceID: 10280}
+      Script: {instanceID: 10288}
     - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10492}
     - Class: 114
-      Script: {instanceID: 10968}
+      Script: {instanceID: 10976}
     - Class: 114
-      Script: {instanceID: 10992}
+      Script: {instanceID: 11000}
     - Class: 114
-      Script: {instanceID: 11028}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11098}
+      Script: {instanceID: 11106}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11176}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11320}
     - Class: 114
-      Script: {instanceID: 11398}
+      Script: {instanceID: 11406}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11448}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 11728}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11968}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 11982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121

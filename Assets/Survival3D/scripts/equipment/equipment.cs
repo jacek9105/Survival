@@ -40,6 +40,11 @@ public class equipment : MonoBehaviour
                 //Cursor.lockState = CursorLockMode.Locked;
                 //Cursor.visible = true;//Pokazanie kursora.
                 Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
             }
 
         }
