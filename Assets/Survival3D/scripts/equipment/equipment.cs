@@ -7,7 +7,7 @@ public class equipment : MonoBehaviour
     public List<Object> listOwnedItem = new List<Object>();
     public Object objectDragg;
 
-    bool didViewInventory;
+    public bool didViewInventory;
     bool didObjectDragg;
     int numberSocketsX;
     int numberSocketsY;
@@ -33,15 +33,36 @@ public class equipment : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.I))
         {
             didViewInventory = !didViewInventory;
-        } 
+
+            Cursor.visible = didViewInventory;//Ukrycie pokazanie kursora myszy.
+            if (didViewInventory == true)
+            {
+                //Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = true;//Pokazanie kursora.
+                Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+
+        }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            didViewInventory = false;
+        }
 
     }
+
 
     private void OnGUI()
     {
         if (didViewInventory == true)
         {
             viewInventory();
+
+
         }
 
         if (didObjectDragg == true)

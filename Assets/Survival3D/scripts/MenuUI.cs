@@ -8,8 +8,9 @@ public class MenuUI : MonoBehaviour {
 	public Button btnStart;
 	public Button btnExit;
 
-	/** Obiekt menu.*/
-	private Canvas manuUI;
+
+    /** Obiekt menu.*/
+    private Canvas manuUI;
 	
 	void Start (){
 		manuUI = (Canvas)GetComponent<Canvas>();//Pobranie menu głównego.
@@ -30,8 +31,9 @@ public class MenuUI : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyUp (KeyCode.Escape)) { //Jeżeli naciśnięto klawisz "Escape"
 			manuUI.enabled = !manuUI.enabled;//Ukrycie/pokazanie menu.
+                  
 
-			Cursor.visible = manuUI.enabled;//Ukrycie pokazanie kursora myszy.
+            Cursor.visible = manuUI.enabled;//Ukrycie pokazanie kursora myszy.
 			
 			if(manuUI.enabled) {
 				Cursor.lockState = CursorLockMode.Confined;//Odblokowanie kursora myszy.
@@ -45,9 +47,14 @@ public class MenuUI : MonoBehaviour {
 				Cursor.visible = false;//Ukrycie kursora.
 				Time.timeScale = 1;//Włączenie czasu.
 				quitMenu.enabled = false; //Ukrycie menu pytania.
-			}
-			
+			}	
 		}
+
+
+        if(Input.GetKeyUp(KeyCode.I))
+        {
+            manuUI.enabled = false;
+        }
 	}
 
 	//Metoda wywoływana po naciśnięciu przycisku "Exit"
