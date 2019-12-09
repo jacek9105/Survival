@@ -7,14 +7,14 @@ public class pickingUpItem : MonoBehaviour
     public GameObject itemToPick;
     public GUISkin skin;
     bool canLift;
-    bool canStack;
+
     int idItem;
 
     public equipment equipment;
     // Start is called before the first frame update
     void Start()
     {
-        canStack = true;
+      
     }
 
     // Update is called once per frame
@@ -26,36 +26,29 @@ public class pickingUpItem : MonoBehaviour
             {
                 idItem = itemToPick.GetComponent<itemToLift>().id;
 
-                if (canStack == true)
-                {
-                    for (int i = 0; i < equipment.listOwnedItem.Count; i++)
+                  for (int i = 0; i < equipment.listOwnedItem.Count; i++)
                     {
                         if (idItem == equipment.listOwnedItem[i].id && itemToPick != null)
                         {
-                            equipment.listOwnedItem[i].quantityInStack += 1;
                             Destroy(itemToPick);
                             itemToPick = null;
-                            canStack = true;
-                            break;
+                            
                         }
-                        else canStack = false;
-                    }
-                }
+                       
+                                
 
-                if(canStack == false)
-                {
-                    for (int i = 0; i < equipment.listOwnedItem.Count; i++)
-                    {
+                   
+                    
                         if (equipment.listOwnedItem[i].id == 0 && itemToPick != null)
                         {
                             equipment.listOwnedItem[i] = Database.itemList[idItem];
                             Destroy(itemToPick);
                             itemToPick = null;
-                            canStack = true;
+                            
                         }
                        
                     }
-                }
+                
 
             }
                 canLift = false;

@@ -10,7 +10,7 @@ public class Object
     public string description;
     public Texture2D objectIcons;
     public GameObject prefabObject;
-    public int quantityInStack;
+    
     public bool isWeapon;
 
 
@@ -19,9 +19,9 @@ public class Object
 
     }
 
-    public Object(int Id, string Name, string Description, bool IsWeapon, int QuantityInStack)
+    public Object(int Id, string Name, string Description, bool IsWeapon)
     {
-        quantityInStack = QuantityInStack;
+       
         id = Id;
         name = Name;
         description = Description;
