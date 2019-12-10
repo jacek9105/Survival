@@ -80,8 +80,12 @@ public class HUD : MonoBehaviour
             actualHP += 1 * Time.deltaTime;
         }
 
+        if (actualStamina < 0.75)
+        {
+            Fpsc.m_Jumping = false;
+            Fpsc.m_IsWalking = true;
+        }
 
-        
         if (Fpsc.m_IsWalking == false)
         {
             actualStamina -= 1 * Time.deltaTime;
@@ -104,10 +108,11 @@ public class HUD : MonoBehaviour
                 { 
                 actualStamina += 1 * Time.deltaTime;
                 }
+       
 
 
 
-        if (actualHP <=0)
+        if (actualHP <= 0.1)
         {
             Destroy(gameObject);
             // Matt dodaj okienko które pozwloić kliknąć koniec gry czy coś takiego i wróci do ekranu pierwszego.
