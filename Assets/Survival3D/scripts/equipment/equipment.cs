@@ -6,21 +6,22 @@ public class equipment : MonoBehaviour
 {
     public List<Object> listOwnedItem = new List<Object>();
     public Object objectDragg;
-
     public bool didViewInventory;
+
     bool didObjectDragg;
     int numberSocketsX;
     int numberSocketsY;
     int previousSlot;
+    public string displayDescription;
 
     public GameObject FPSCon;
-
     public GUISkin skin;
     public Transform handPosition;
 
     // Start is called before the first frame update
     void Start()
     {
+        displayDescription = null;
         didViewInventory = false;
         numberSocketsX = 5;
         numberSocketsY = 4;
@@ -33,6 +34,7 @@ public class equipment : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.I))
         {
             didViewInventory = !didViewInventory;
+        
 
             Cursor.visible = didViewInventory;//Ukrycie pokazanie kursora myszy.
             if (didViewInventory == true)
@@ -56,18 +58,19 @@ public class equipment : MonoBehaviour
     }
 
 
-    private void OnGUI()
+    void OnGUI()
     {
         if (didViewInventory == true)
         {
             viewInventory();
-
-
         }
-
         if (didObjectDragg == true)
         {
             GUI.DrawTexture(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, 50, 50), objectDragg.objectIcons);
+        }
+        if (displayDescription != null)
+        {
+            GUI.Box(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, 150, 50), displayDescription);
         }
     }
 
@@ -85,6 +88,7 @@ public class equipment : MonoBehaviour
                 if(listOwnedItem[i].id != 0)
                 {
                     GUI.DrawTexture(slotLocation, listOwnedItem[i].objectIcons);
+                    GUI.Box(slotLocation, listOwnedItem[i].stackedQuantity.ToString(), skin.GetStyle("stackedQuantityStyle"));
                     
                 }
                 //Przenoszenie
@@ -113,7 +117,20 @@ public class equipment : MonoBehaviour
                 {
                     useObject(listOwnedItem[i].id, i, true, listOwnedItem[i].isWeapon);
                 }
-                    i++;
+
+                // wyświetlanie informacji o przedmiotach
+                if (slotLocation.Contains(Event.current.mousePosition) && listOwnedItem[i].id !=0 )
+                {
+                    displayDescription = listOwnedItem[i].description;
+
+                }
+                else if(slotLocation.Contains(Event.current.mousePosition) && listOwnedItem[i].id == 0)
+                {
+                    displayDescription = null;
+                }
+
+                i++;
+                
             } 
         }
 

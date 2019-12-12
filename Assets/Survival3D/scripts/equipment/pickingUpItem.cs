@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,7 @@ public class pickingUpItem : MonoBehaviour
     public GameObject itemToPick;
     public GUISkin skin;
     bool canLift;
+    bool didStacked; 
 
     int idItem;
 
@@ -14,48 +15,52 @@ public class pickingUpItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        didStacked = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(canLift == true)
+        if (canLift == true)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 idItem = itemToPick.GetComponent<itemToLift>().id;
 
-                  for (int i = 0; i < equipment.listOwnedItem.Count; i++)
+                if (didStacked == true)
+                {
+                    for (int i = 0; i < equipment.listOwnedItem.Count; i++)
                     {
                         if (idItem == equipment.listOwnedItem[i].id && itemToPick != null)
                         {
+                            equipment.listOwnedItem[i].stackedQuantity += 1;
                             Destroy(itemToPick);
                             itemToPick = null;
-                            
+                            didStacked = true;
+                            break;
                         }
-                       
-                                
-
-                   
-                    
+                        else { didStacked = false; }
+                    }
+                }
+                if (didStacked == false)
+                {
+                    for (int i = 0; i < equipment.listOwnedItem.Count; i++)
+                    {
                         if (equipment.listOwnedItem[i].id == 0 && itemToPick != null)
                         {
                             equipment.listOwnedItem[i] = Database.itemList[idItem];
                             Destroy(itemToPick);
                             itemToPick = null;
-                            
+                            didStacked = true;
                         }
-                       
                     }
-                
+                }
+
 
             }
-                canLift = false;
-            }
         }
-        
-    
+
+    }
 
     private void OnTriggerEnter(Collider col)
     {
