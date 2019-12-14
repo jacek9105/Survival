@@ -10,11 +10,13 @@ public class pickingUpItem : MonoBehaviour
     bool didStacked; 
 
     int idItem;
+    int maxStack;
 
     public equipment equipment;
     // Start is called before the first frame update
     void Start()
     {
+        maxStack = 2;
         didStacked = true;
     }
 
@@ -31,7 +33,7 @@ public class pickingUpItem : MonoBehaviour
                 {
                     for (int i = 0; i < equipment.listOwnedItem.Count; i++)
                     {
-                        if (idItem == equipment.listOwnedItem[i].id && itemToPick != null)
+                        if (idItem == equipment.listOwnedItem[i].id && itemToPick != null && equipment.listOwnedItem[i].stackedQuantity < maxStack)
                         {
                             equipment.listOwnedItem[i].stackedQuantity += 1;
                             Destroy(itemToPick);
@@ -48,7 +50,7 @@ public class pickingUpItem : MonoBehaviour
                     {
                         if (equipment.listOwnedItem[i].id == 0 && itemToPick != null)
                         {
-                            equipment.listOwnedItem[i] = Database.itemList[idItem];
+                            equipment.listOwnedItem[i] = new Object(Database.itemList[idItem].id, Database.itemList[idItem].name, Database.itemList[idItem].description, Database.itemList[idItem].isWeapon, Database.itemList[idItem].stackedQuantity);
                             Destroy(itemToPick);
                             itemToPick = null;
                             didStacked = true;
