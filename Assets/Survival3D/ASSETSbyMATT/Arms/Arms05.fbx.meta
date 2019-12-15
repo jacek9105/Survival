@@ -27,7 +27,12 @@ ModelImporter:
   - first:
       74: -472583207363285103
     second: Swing02
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: fe2cdaed1f245a2449f4cd4234af601c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
