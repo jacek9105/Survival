@@ -16,7 +16,7 @@ public class pickingUpItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxStack = 2;
+        maxStack = 5;
         didStacked = true;
     }
 

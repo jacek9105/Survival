@@ -11,14 +11,14 @@ public class Object
     public Texture2D objectIcons;
     public GameObject prefabObject;
     public bool isWeapon;
-    public int stackedQuantity;
+    public float stackedQuantity;
 
     public Object()
     {
 
     }
 
-    public Object(int Id, string Name, string Description, bool IsWeapon, int StackedQuanity)
+    public Object(int Id, string Name, string Description, bool IsWeapon, float StackedQuanity)
     {
        
         id = Id;

@@ -9,6 +9,8 @@ public class equipment : MonoBehaviour
     public bool didViewInventory;
 
     bool didObjectDragg;
+    bool doShare;
+
     int numberSocketsX;
     int numberSocketsY;
     int previousSlot;
@@ -21,6 +23,7 @@ public class equipment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        doShare = false;
         displayDescription = null;
         didViewInventory = false;
         numberSocketsX = 5;
@@ -84,13 +87,38 @@ public class equipment : MonoBehaviour
             {
                 Rect slotLocation = new Rect(Screen.width * 0.05f + (x * Screen.width * 0.075f), Screen.height * 0.05f + (y * Screen.height * 0.13f), Screen.width * 0.07f, Screen.height * 0.13f);
                 GUI.Box(slotLocation, "", skin.GetStyle("slotEkwipunku"));
-
-                if(listOwnedItem[i].id != 0)
+                
+                
+                if (listOwnedItem[i].id != 0)
                 {
                     GUI.DrawTexture(slotLocation, listOwnedItem[i].objectIcons);
                     GUI.Box(slotLocation, listOwnedItem[i].stackedQuantity.ToString(), skin.GetStyle("stackedQuantityStyle"));
-                    
+
                 }
+
+                //Dzielenie ilości w stacku
+                if (Input.GetKey(KeyCode.LeftShift) && slotLocation.Contains(Event.current.mousePosition) && listOwnedItem[i].stackedQuantity > 1 && Event.current.type == EventType.MouseDrag && didObjectDragg == false)
+                {
+                    didObjectDragg = true;
+                    doShare = true;
+                    if (listOwnedItem[i].stackedQuantity % 2 > 0)
+                    {
+                        listOwnedItem[i].stackedQuantity = Mathf.Round(listOwnedItem[i].stackedQuantity / 2 + 0.15f);
+                        objectDragg = new Object(listOwnedItem[i].id, listOwnedItem[i].name, listOwnedItem[i].description, listOwnedItem[i].isWeapon, listOwnedItem[i].stackedQuantity);
+                        objectDragg.stackedQuantity = listOwnedItem[i].stackedQuantity - 1;
+                    }
+                    else if (listOwnedItem[i].stackedQuantity %2 == 0)
+                    {
+                        listOwnedItem[i].stackedQuantity = listOwnedItem[i].stackedQuantity / 2;
+                        objectDragg = listOwnedItem[i];
+                        objectDragg.stackedQuantity = listOwnedItem[i].stackedQuantity;
+                    }
+
+
+                }
+
+
+
                 //Przenoszenie
                 if(slotLocation.Contains(Event.current.mousePosition)  && Event.current.type == EventType.MouseDrag && didObjectDragg == false)
                 {
@@ -102,11 +130,12 @@ public class equipment : MonoBehaviour
 
                 if (slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].id == 0 && didObjectDragg == true)
                 {
-                    listOwnedItem[i] = objectDragg;
+                    listOwnedItem[i] = new Object(objectDragg.id, objectDragg.name, objectDragg.description, objectDragg.isWeapon, objectDragg.stackedQuantity);
                     didObjectDragg = false;
+                    doShare = false;
                 }
 
-                if (slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].id > 0 && didObjectDragg == true)
+                if (slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].id > 0 && didObjectDragg == true && doShare == false)
                 {
                     listOwnedItem[previousSlot] = listOwnedItem[i];
                     listOwnedItem[i] = objectDragg;
