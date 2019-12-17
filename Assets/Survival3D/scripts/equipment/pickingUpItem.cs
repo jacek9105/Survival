@@ -10,13 +10,13 @@ public class pickingUpItem : MonoBehaviour
     bool didStacked; 
 
     int idItem;
-    int maxStack;
+    public static int maxStack;
 
     public equipment equipment;
     // Start is called before the first frame update
     void Start()
     {
-        maxStack = 5;
+        maxStack = 3;
         didStacked = true;
     }
 

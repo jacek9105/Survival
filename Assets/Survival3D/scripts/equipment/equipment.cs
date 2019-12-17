@@ -113,7 +113,14 @@ public class equipment : MonoBehaviour
                         objectDragg = listOwnedItem[i];
                         objectDragg.stackedQuantity = listOwnedItem[i].stackedQuantity;
                     }
+                }
 
+                //Łączenie przedmiotów w stacku
+                if (didObjectDragg == true && objectDragg.id == listOwnedItem[i].id && objectDragg != null && slotLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listOwnedItem[i].stackedQuantity + objectDragg.stackedQuantity <= pickingUpItem.maxStack)
+                {
+                    listOwnedItem[i] = new Object(objectDragg.id, objectDragg.name, objectDragg.description, objectDragg.isWeapon, listOwnedItem[i].stackedQuantity + objectDragg.stackedQuantity);
+                    didObjectDragg = false;
+                    objectDragg = null;
 
                 }
 
