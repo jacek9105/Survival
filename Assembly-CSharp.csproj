@@ -71,6 +71,9 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Survival3D\MATT\Scripts\AnimControl\AnimControl.cs" />
+     <Compile Include="Assets\Survival3D\MATT\Scripts\MenuUI\MenuUI.cs" />
+     <Compile Include="Assets\Survival3D\MATT\Scripts\WeaponsSwitch\WeaponSwitch.cs" />
      <Compile Include="Assets\Survival3D\scripts\AI\enemyAI.cs" />
      <Compile Include="Assets\Survival3D\scripts\Axe\Axe.cs" />
      <Compile Include="Assets\Survival3D\scripts\Axe\Tree_Felling.cs" />
@@ -81,8 +84,6 @@
      <Compile Include="Assets\Survival3D\scripts\equipment\Object.cs" />
      <Compile Include="Assets\Survival3D\scripts\equipment\pickingUpItem.cs" />
      <Compile Include="Assets\Survival3D\scripts\HUD\HUD.cs" />
-     <Compile Include="Assets\Survival3D\scripts\MenuUI\MenuUI.cs" />
-     <Compile Include="Assets\Survival3D\scripts\WeaponsSwitch\WeaponSwitch.cs" />
      <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
