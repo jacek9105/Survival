@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Crafting : MonoBehaviour
 {
+    public Database Database;
     public equipment equipment;
     public GUISkin skin;
     int numberSocketsX;
@@ -18,7 +19,7 @@ public class Crafting : MonoBehaviour
 
 
     void Update()
-    {
+    {   
         if (Input.GetKeyDown(KeyCode.P))
         {
             didViewCrafting = !didViewCrafting;
@@ -41,6 +42,11 @@ public class Crafting : MonoBehaviour
             {
                 Rect slotLocation = new Rect(Screen.width * 0.05f + (x * Screen.width * 0.075f), Screen.height * 0.05f + (y * Screen.height * 0.13f), Screen.width * 0.07f, Screen.height * 0.13f);
                 GUI.Box(slotLocation, "", skin.GetStyle("slotCraftingu"));
+                if(Database.itemCraftingList[i].id != 0)
+                {
+                GUI.DrawTexture(slotLocation, Database.itemCraftingList[i].objectIcons);
+                }
+                i++;
             }
         }
     }
