@@ -3716,6 +3716,42 @@ MonoBehaviour:
     prefabObject: {fileID: 0}
     isWeapon: 0
     stackedQuantity: 0
+  listItemToolbar:
+  - id: 0
+    name: 
+    description: 
+    objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
+    stackedQuantity: 0
+  - id: 0
+    name: 
+    description: 
+    objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
+    stackedQuantity: 0
+  - id: 0
+    name: 
+    description: 
+    objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
+    stackedQuantity: 0
+  - id: 0
+    name: 
+    description: 
+    objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
+    stackedQuantity: 0
+  - id: 0
+    name: 
+    description: 
+    objectIcons: {fileID: 0}
+    prefabObject: {fileID: 0}
+    isWeapon: 0
+    stackedQuantity: 0
   objectDragg:
     id: 0
     name: 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class equipment : MonoBehaviour
 {
     public List<Object> listOwnedItem = new List<Object>();
+    public List<Object> listItemToolbar = new List<Object>();
     public Object objectDragg;
     public bool didViewInventory;
 
@@ -13,6 +14,7 @@ public class equipment : MonoBehaviour
 
     int numberSocketsX;
     int numberSocketsY;
+    int numberSocketsToolbar =5;
     int previousSlot;
     public string displayDescription;
 
@@ -63,6 +65,7 @@ public class equipment : MonoBehaviour
 
     void OnGUI()
     {
+        toolbar();
         if (didViewInventory == true)
         {
             viewInventory();
@@ -75,6 +78,39 @@ public class equipment : MonoBehaviour
         {
             GUI.Box(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, 150, 50), displayDescription);
         }
+    }
+
+    void toolbar()
+    {
+        int i = 0;
+        for(int j=0;j<numberSocketsToolbar;j++)
+        {
+            Rect toolbarLocation = new Rect(Screen.width * 0.25f + (j * Screen.width * 0.075f), Screen.height * 0.85f , Screen.width * 0.07f, Screen.height * 0.13f);
+            GUI.Box(toolbarLocation, "", skin.GetStyle("slotEkwipunku"));
+
+            if(listItemToolbar[i].id != 0)
+            {
+                GUI.DrawTexture(toolbarLocation, listItemToolbar[i].objectIcons);
+                GUI.Box(toolbarLocation, listItemToolbar[i].stackedQuantity.ToString(), skin.GetStyle("stackedQuantityStyle"));
+            }
+
+            if(toolbarLocation.Contains (Event.current.mousePosition) && Event.current.type == EventType.MouseUp && listItemToolbar[i].id ==0 && didObjectDragg == true)
+            {
+                listItemToolbar[i] = new Object(objectDragg.id, objectDragg.name, objectDragg.description, objectDragg.isWeapon, objectDragg.stackedQuantity);
+                didObjectDragg = false;
+                doShare = false;
+            }
+
+            if (didViewInventory == true && toolbarLocation.Contains(Event.current.mousePosition) && Event.current.type == EventType.MouseDrag && didObjectDragg == false)
+            {
+                objectDragg = listItemToolbar[i];
+                listItemToolbar[i] = new Object();
+                didObjectDragg = true;
+            }
+
+            i++;
+        }
+
     }
 
     void viewInventory()
