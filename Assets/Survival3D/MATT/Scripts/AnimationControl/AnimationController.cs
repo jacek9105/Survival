@@ -14,11 +14,11 @@ public class AnimationController : MonoBehaviour {
 
     void Update()
     {
-       /* if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             anim.Play("Run", -1, 0f);
         }
-        */
+        
         if (Input.GetMouseButtonDown(0))
         {
             anim.Play("Swing01", -1, 0f);
