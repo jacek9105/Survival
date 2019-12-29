@@ -9,25 +9,15 @@ public class WeaponSwitch : MonoBehaviour
 
     [SerializeField]
     GameObject primary, secondary, melee;
-    public Animator anim;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
-        //anim = GetComponentInChildren<Animator> ();
         SwapWeapon(1);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown("5"))
-         {
-             anim.Play("Swing01", -1,0f);
-         }
-         
-
-
-
+     
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if(weaponSelected != 1)
