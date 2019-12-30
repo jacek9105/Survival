@@ -28,6 +28,10 @@ public class AnimationController : MonoBehaviour {
         {
             anim.Play("Swing02", -1, 0f);
         }
-            
+
+        if (Input.GetMouseButtonDown(2))
+        {
+            anim.Play("PunchLeft", -1, 0f);
+        }
     }
 }
