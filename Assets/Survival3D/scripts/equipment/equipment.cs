@@ -91,7 +91,7 @@ public class equipment : MonoBehaviour
         int i = 0;
         for(int j=0;j<numberSocketsToolbar;j++)
         {
-            Rect toolbarLocation = new Rect(Screen.width * 0.25f + (j * Screen.width * 0.075f), Screen.height * 0.85f , Screen.width * 0.07f, Screen.height * 0.13f);
+            Rect toolbarLocation = new Rect(Screen.width * 0.35f + (j * Screen.width * 0.075f), Screen.height * 0.85f , Screen.width * 0.07f, Screen.height * 0.13f);
             GUI.Box(toolbarLocation, "", skin.GetStyle("slotEkwipunku"));
 
             if(listItemToolbar[i].id != 0)
@@ -218,8 +218,13 @@ public class equipment : MonoBehaviour
     {
         if (id == 3)
         {
-            Debug.Log("Zmniejszono pragnienie");
+            if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else {HUD.actualDesire = 100; }
         }
+        if( id == 4)
+        {
+            if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+        }
+
         if (isWeapon == true && didObjectDragg == false)
         {
             GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);

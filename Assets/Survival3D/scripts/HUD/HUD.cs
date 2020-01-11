@@ -8,17 +8,17 @@ public class HUD : MonoBehaviour
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController Fpsc;
     bool decreaseStamina;
 
-    public float maxHP;
-    public float actualHP;
+    static public float maxHP;
+    static public float actualHP;
 
-    public float maxDesire;
-    public float actualDesire;
+    static public float maxDesire;
+    static public float actualDesire;
 
-    public float maxHunger;
-    public float actualHunger;
+    static public float maxHunger;
+    static public float actualHunger;
 
-    public float maxStamina;
-    public float actualStamina;
+    static public float maxStamina;
+    static public float actualStamina;
 
     public GameObject hpBar;
     public GameObject desireBar;
@@ -47,8 +47,8 @@ public class HUD : MonoBehaviour
         hungerBar.transform.localScale = new Vector3(actualHunger / maxHunger, 1, 0);
         staminaBar.transform.localScale = new Vector3(actualStamina / maxStamina, 1, 0);
 
-        actualDesire -= 0.1f * Time.deltaTime;
-        actualHunger -= 0.1f * Time.deltaTime;
+        actualDesire -= 0.5f * Time.deltaTime;
+        actualHunger -= 0.25f * Time.deltaTime;
 
       
 
@@ -71,7 +71,7 @@ public class HUD : MonoBehaviour
 
 
 
-        if(actualDesire < 5 || actualHunger < 5)
+        if (actualDesire < 5 || actualHunger < 5)
         {
             actualHP -= 0.1f * Time.deltaTime;
         }
