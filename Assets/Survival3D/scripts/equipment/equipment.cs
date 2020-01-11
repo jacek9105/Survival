@@ -243,10 +243,13 @@ public class equipment : MonoBehaviour
             
         }
 
-
-        if (didDelete == true)
+        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity == 1)
         {
             listOwnedItem[slotNumber] = new Object();
+        }
+        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1)
+        {
+            listOwnedItem[slotNumber].stackedQuantity -= 1;
         }
 
     }

@@ -8,7 +8,7 @@ public class DayNightCycle : MonoBehaviour
     public Light sunLight;
     public int dayLength;
     public float rotationSunSpeed;
-    public float actualTime;
+    static public float actualTime;
     void Start()
     {
         dayLength = 60;
