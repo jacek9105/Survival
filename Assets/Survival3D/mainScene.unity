@@ -4555,12 +4555,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 464a9350dd44a344bb0c657225aaddf3, type: 3}
---- !u!4 &352803149 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: e5afa675f48e57d46a1912e05d1f5a10,
-    type: 3}
-  m_PrefabInstance: {fileID: 942393610}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &356497831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8118,6 +8112,7 @@ MonoBehaviour:
   Database: {fileID: 1220538076}
   equipment: {fileID: 298123857}
   skin: {fileID: 11400000, guid: 16c32de33657f7e42a1f2e51bd969013, type: 2}
+  info: 
 --- !u!1001 &692519948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8283,8 +8278,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 1a9c96de18108fb4b9d41982d99e7914, type: 3}
 --- !u!4 &693487514 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1a9c96de18108fb4b9d41982d99e7914,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 693487513}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &704730085
@@ -11778,21 +11772,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610291145}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: e5afa675f48e57d46a1912e05d1f5a10,
-        type: 3}
-      propertyPath: m_Name
-      value: Knife
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e5afa675f48e57d46a1912e05d1f5a10,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e5afa675f48e57d46a1912e05d1f5a10,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e5afa675f48e57d46a1912e05d1f5a10,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11863,6 +11842,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e5afa675f48e57d46a1912e05d1f5a10,
+        type: 3}
+      propertyPath: m_Name
+      value: Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e5afa675f48e57d46a1912e05d1f5a10,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e5afa675f48e57d46a1912e05d1f5a10,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: e5afa675f48e57d46a1912e05d1f5a10,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11870,6 +11864,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2cea2728d20a00548bd734fd7c40fb63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5afa675f48e57d46a1912e05d1f5a10, type: 3}
+--- !u!4 &942393611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 942393610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &945377981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: badfe6023e664ba48bdaad6b0951a6ac,
@@ -17783,11 +17782,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4045817768345548, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.16
+      value: 70.176
       objectReference: {fileID: 0}
     - target: {fileID: 4045817768345548, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 345.76
+      value: 345.988
       objectReference: {fileID: 0}
     - target: {fileID: 4045817768345548, guid: e048a401410aa9f4791cdd97e15735ca, type: 3}
       propertyPath: m_LocalRotation.x
@@ -20222,7 +20221,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 352803149}
+  - {fileID: 942393611}
   m_Father: {fileID: 1745145005}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20613,6 +20612,7 @@ GameObject:
   - component: {fileID: 1647610856}
   - component: {fileID: 1647610854}
   - component: {fileID: 1647610855}
+  - component: {fileID: 1647610861}
   m_Layer: 0
   m_Name: axe
   m_TagString: itemToPick
@@ -20735,12 +20735,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647610853}
   m_LocalRotation: {x: -0.024224509, y: 0.70669174, z: -0.024224501, w: 0.70669174}
-  m_LocalPosition: {x: 1718.95, y: 70.16, z: 345.76}
+  m_LocalPosition: {x: 1718.95, y: 70.176, z: 345.988}
   m_LocalScale: {x: 2.0000005, y: 2.0000002, z: 2.000001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -3.9270003}
+--- !u!65 &1647610861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647610853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.06, z: 0.18}
+  m_Center: {x: 0.23, y: -0.0000019128431, z: -1.3100113e-11}
 --- !u!1001 &1650523297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23146,6 +23159,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1874358493}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1874358495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9d1bbfb4095450c429a52ed5b407dcbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1874358493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1874358496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874358495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.86, y: 0.48, z: 1.02}
+  m_Center: {x: -0.17, y: -0.01, z: 1.17}
 --- !u!1001 &1888373477
 PrefabInstance:
   m_ObjectHideFlags: 0

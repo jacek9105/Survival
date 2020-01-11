@@ -11,7 +11,9 @@ public class Crafting : MonoBehaviour
     int numberSocketsY;
     bool didViewCrafting;
     public string info;
-
+    bool haveId1;
+    bool haveId2;
+    bool haveId3;
     void Start()
     {
         numberSocketsX = 5;
@@ -97,6 +99,25 @@ public class Crafting : MonoBehaviour
             info = "Needed items:" + "\n" + "stone" + "\n" + "wood";
         }
 
+    }
+    // tak samo jak wyzej 
+    void  CreateItem(int id)
+    {
+        if(id == 3)
+        {
+
+        }
+    }
+
+    void CheckItem(int id1, int id2=0, int id3=0)
+    {
+        for(int x = 0; x<equipment.listOwnedItem.Count; x++)
+        {
+            if(equipment.listOwnedItem[x].id == id1)
+            {
+                haveId1 = true;
+            }
+        }
     }
 }
  
