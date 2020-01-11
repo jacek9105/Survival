@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 using UnityEngine;
 [System.Serializable]
@@ -28,6 +29,6 @@ public class Object
         objectIcons = Resources.Load<Texture2D>("Icons/" + name);
         prefabObject = Resources.Load<GameObject>("Prefabs/" + name);
         stackedQuantity = StackedQuanity;
-    } 
+    }
 
 }

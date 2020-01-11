@@ -6,6 +6,7 @@ public class equipment : MonoBehaviour
 {
     public List<Object> listOwnedItem = new List<Object>();
     public List<Object> listItemToolbar = new List<Object>();
+
     public Object objectDragg;
     public bool didViewInventory;
 
@@ -18,6 +19,7 @@ public class equipment : MonoBehaviour
     int previousSlot;
     public string displayDescription;
 
+    public GameObject draggedObject;
     public GameObject FPSCon;
     public GUISkin skin;
     public Transform handPosition;
@@ -58,6 +60,10 @@ public class equipment : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             didViewInventory = false;
+        }
+        if(didViewInventory == false)
+        {
+            displayDescription = null;
         }
 
     }
@@ -184,10 +190,10 @@ public class equipment : MonoBehaviour
                     listOwnedItem[i] = objectDragg;
                     didObjectDragg = false;
                 }
-                //usuwanie przedmiotów
+                //używanie przedmiotów
                 if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(1))
                 {
-                    useObject(listOwnedItem[i].id, i, true, listOwnedItem[i].isWeapon);
+                    useObject(listOwnedItem[i].id, i, !listOwnedItem[i].isWeapon, listOwnedItem[i].isWeapon);
                 }
 
                 // wyświetlanie informacji o przedmiotach
@@ -210,16 +216,37 @@ public class equipment : MonoBehaviour
 
     void useObject(int id, int slotNumber, bool didDelete, bool isWeapon)
     {
-        if (isWeapon == true)
+        if (id == 3)
+        {
+            Debug.Log("Zmniejszono pragnienie");
+        }
+        if (isWeapon == true && didObjectDragg == false)
         {
             GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
             objekt.name = listOwnedItem[slotNumber].name;
             objekt.transform.parent = FPSCon.transform;
+            draggedObject= objekt;
+            didObjectDragg = true;
         }
-        if (didDelete)
+        if (isWeapon == true && didObjectDragg == true)
+        {
+            Destroy(draggedObject.gameObject);
+            GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
+            objekt.name = listOwnedItem[slotNumber].name;
+            objekt.transform.parent = FPSCon.transform;
+            draggedObject = objekt;
+            
+        }
+
+
+        if (didDelete == true)
         {
             listOwnedItem[slotNumber] = new Object();
         }
 
     }
+
+    //skróty klawiszowe
+
+
 }

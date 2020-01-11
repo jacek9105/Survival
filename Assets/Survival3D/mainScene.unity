@@ -3149,7 +3149,7 @@ PrefabInstance:
     - target: {fileID: 4611891048765607417, guid: fc3266ce66cdd0c4db180f87ed3be8cc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -90.2
+      value: -89.06
       objectReference: {fileID: 0}
     - target: {fileID: 4611891048765607417, guid: fc3266ce66cdd0c4db180f87ed3be8cc,
         type: 3}
@@ -3762,9 +3762,10 @@ MonoBehaviour:
     stackedQuantity: 0
   didViewInventory: 0
   displayDescription: 
+  draggedObject: {fileID: 0}
   FPSCon: {fileID: 298123856}
   skin: {fileID: 11400000, guid: 16c32de33657f7e42a1f2e51bd969013, type: 2}
-  handPosition: {fileID: 0}
+  handPosition: {fileID: 31896691}
 --- !u!114 &298123858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4363,7 +4364,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348949210}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &348949213
 Camera:
   m_ObjectHideFlags: 0
@@ -14238,8 +14239,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.98, y: 17.461285, z: 3.09}
-  m_Center: {x: 0.19, y: 8.5, z: 0.21}
+  m_Size: {x: 3, y: 20, z: 3}
+  m_Center: {x: 0, y: 8, z: 0}
 --- !u!114 &1131813599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20896,8 +20897,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 1, z: 0.5}
-  m_Center: {x: 0.00011198968, y: 0.13499999, z: -0.000084821135}
+  m_Size: {x: 0.5, y: 1, z: 0.5}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!64 &1623529192
 MeshCollider:
   m_ObjectHideFlags: 0
