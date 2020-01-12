@@ -35,7 +35,7 @@ public class HUD : MonoBehaviour
 
         actualHP = 100;
         actualDesire = 100;
-        actualHunger = 100;
+        actualHunger = 25;
         actualStamina = 100;
     }
 

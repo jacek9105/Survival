@@ -24,7 +24,7 @@ public class AnimationController : MonoBehaviour {
             anim.Play("Swing01", -1, 0f);
         }
            
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && equipment.didViewInventory == false)
         {
             anim.Play("Swing02", -1, 0f);
         }

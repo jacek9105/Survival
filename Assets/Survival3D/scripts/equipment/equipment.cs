@@ -8,10 +8,11 @@ public class equipment : MonoBehaviour
     public List<Object> listItemToolbar = new List<Object>();
 
     public Object objectDragg;
-    public bool didViewInventory;
+    static public bool didViewInventory;
 
     bool didObjectDragg;
     bool doShare;
+
 
     int numberSocketsX;
     int numberSocketsY;
@@ -24,6 +25,8 @@ public class equipment : MonoBehaviour
     public GUISkin skin;
     public Transform handPosition;
 
+    float timeUseObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,40 +35,30 @@ public class equipment : MonoBehaviour
         didViewInventory = false;
         numberSocketsX = 5;
         numberSocketsY = 4;
-        
+        timeUseObject = 0;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        displayDescription = null;
+
         if (Input.GetKeyUp(KeyCode.I))
         {
             didViewInventory = !didViewInventory;
-        
-
             Cursor.visible = didViewInventory;//Ukrycie pokazanie kursora myszy.
             if (didViewInventory == true)
             {
-                //Cursor.lockState = CursorLockMode.Locked;
-                //Cursor.visible = true;//Pokazanie kursora.
                 Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.
-                Time.timeScale = 0;
             }
-            else
-            {
-                Time.timeScale = 1;
-            }
-
         }
+
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             didViewInventory = false;
         }
-        if(didViewInventory == false)
-        {
-            displayDescription = null;
-        }
-
     }
 
 
@@ -216,15 +209,6 @@ public class equipment : MonoBehaviour
 
     void useObject(int id, int slotNumber, bool didDelete, bool isWeapon)
     {
-        if (id == 3)
-        {
-            if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else {HUD.actualDesire = 100; }
-        }
-        if( id == 4)
-        {
-            if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
-        }
-
         if (isWeapon == true && didObjectDragg == false)
         {
             GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
@@ -233,6 +217,7 @@ public class equipment : MonoBehaviour
             draggedObject= objekt;
             didObjectDragg = true;
         }
+
         if (isWeapon == true && didObjectDragg == true)
         {
             Destroy(draggedObject.gameObject);
@@ -243,15 +228,31 @@ public class equipment : MonoBehaviour
             
         }
 
-        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity == 1)
+        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity == 1 && timeUseObject + 1 < DayNightCycle.actualTime)
         {
             listOwnedItem[slotNumber] = new Object();
+            if (id == 3)
+            {
+                if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
+            }
+            if (id == 4)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
         }
-        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1)
+        else if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1 && timeUseObject + 1 < DayNightCycle.actualTime)
         {
+            timeUseObject = DayNightCycle.actualTime;
             listOwnedItem[slotNumber].stackedQuantity -= 1;
+            if (id == 3)
+            {
+                if (HUD.actualDesire <= 75) { HUD.actualDesire += 25;  } else { HUD.actualDesire = 100; }
+            }
+            if (id == 4)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
         }
-
     }
 
     //skróty klawiszowe
