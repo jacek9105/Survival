@@ -13,7 +13,7 @@ public class Axe : MonoBehaviour
     void Start()
     {
         hitAble = true;
-
+        
     }
 
     // Update is called once per frame
@@ -39,22 +39,20 @@ public class Axe : MonoBehaviour
     {
         if (collider.tag == "Tree" && hited == true)
         {
-            if (collider.gameObject.GetComponent<Tree_Felling>().TreeHP > -2)
-            {
-                collider.gameObject.GetComponent<Tree_Felling>().TreeHP -= 1;
-                // chopSound.Play();
+            if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP > -2)
+            { 
+            collider.gameObject.GetComponent<Tree_Felling>().TreeHP -= 1;
+               // chopSound.Play();
             }
-            if (collider.gameObject.GetComponent<Tree_Felling>().TreeHP <= 0)
+            if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP <= 0)
             {
-                for (int i = 0; i < eq.listOwnedItem.Count; i++)
+                for(int i = 0; i<eq.listOwnedItem.Count; i++)
                 {
-                    if (eq.listOwnedItem[i].id == 0)
+                    if(eq.listOwnedItem[i].id == 0)
                     {
                         eq.listOwnedItem[i] = Database.itemList[2];
                         break;
                     }
-
-                 
                 }
             }
         }
