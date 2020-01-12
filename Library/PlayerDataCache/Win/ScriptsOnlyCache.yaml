@@ -3,12 +3,15 @@ ScriptsOnlyBuild:
     Assembly-CSharp-firstpass.dll:
     - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
+    - AQUAS_Lite.AQUAS_Lite_Reflection
     - AnimationController
+    - Axe
     - Crafting
     - Database
     - DayNightCycle
     - HUD
     - MenuUI
+    - Readme
     - Tree_Felling
     - WeaponSwitch
     - enemyAI
@@ -17,30 +20,15 @@ ScriptsOnlyBuild:
     - pickingUpItem
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.Experimental.TerrainAPI.BillowNoise
-    - UnityEditor.Experimental.TerrainAPI.BridgeTool
-    - UnityEditor.Experimental.TerrainAPI.CloneBrushTool
-    - UnityEditor.Experimental.TerrainAPI.ContrastTool
     - UnityEditor.Experimental.TerrainAPI.FbmFractalType
-    - UnityEditor.Experimental.TerrainAPI.MeshStampTool
     - UnityEditor.Experimental.TerrainAPI.NoiseBlitShaderGenerator
     - UnityEditor.Experimental.TerrainAPI.NoiseFillShaderGenerator
-    - UnityEditor.Experimental.TerrainAPI.NoiseHeightTool
     - UnityEditor.Experimental.TerrainAPI.NoneFractalType
-    - UnityEditor.Experimental.TerrainAPI.PaintHeightTool
-    - UnityEditor.Experimental.TerrainAPI.PaintTextureTool
     - UnityEditor.Experimental.TerrainAPI.PerlinNoise
     - UnityEditor.Experimental.TerrainAPI.RidgeNoise
-    - UnityEditor.Experimental.TerrainAPI.SetHeightTool
-    - UnityEditor.Experimental.TerrainAPI.SharpenPeaksTool
-    - UnityEditor.Experimental.TerrainAPI.SlopeFlattenTool
-    - UnityEditor.Experimental.TerrainAPI.SmoothHeightTool
-    - UnityEditor.Experimental.TerrainAPI.StampTool
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
-    - UnityEditor.Experimental.TerrainAPI.TerraceErosion
-    - UnityEditor.Experimental.TerrainAPI.ThermalErosionTool
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
-    - UnityEditor.Experimental.TerrainAPI.WindErosionTool
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -49,7 +37,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -106,49 +93,53 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 692}
+      Script: {instanceID: 696}
     - Class: 114
-      Script: {instanceID: 9798}
+      Script: {instanceID: 9802}
     - Class: 114
-      Script: {instanceID: 9810}
+      Script: {instanceID: 9814}
     - Class: 114
-      Script: {instanceID: 9874}
+      Script: {instanceID: 9878}
     - Class: 114
-      Script: {instanceID: 9908}
+      Script: {instanceID: 9912}
     - Class: 114
-      Script: {instanceID: 9998}
+      Script: {instanceID: 10002}
     - Class: 114
-      Script: {instanceID: 10048}
+      Script: {instanceID: 10052}
     - Class: 114
-      Script: {instanceID: 10282}
+      Script: {instanceID: 10288}
     - Class: 114
-      Script: {instanceID: 10486}
+      Script: {instanceID: 10492}
     - Class: 114
-      Script: {instanceID: 10970}
+      Script: {instanceID: 10978}
     - Class: 114
-      Script: {instanceID: 10994}
+      Script: {instanceID: 11002}
     - Class: 114
-      Script: {instanceID: 11030}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 11100}
+      Script: {instanceID: 11108}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11272}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11410}
     - Class: 114
       Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11666}
+      Script: {instanceID: 11556}
     - Class: 114
-      Script: {instanceID: 11966}
+      Script: {instanceID: 11676}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 11744}
+    - Class: 114
+      Script: {instanceID: 11976}
+    - Class: 114
+      Script: {instanceID: 11990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -178,6 +169,8 @@ ScriptsOnlyBuild:
     - Class: 205
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 215
       Script: {instanceID: 0}
     - Class: 218
       Script: {instanceID: 0}
@@ -448,6 +441,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: TimedObjectActivator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AQUAS_Lite
+    className: AQUAS_Lite_Camera
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -762,6 +761,12 @@ ScriptsOnlyBuild:
     className: MobileControlRig
   - hash:
       serializedVersion: 2
+      Hash: 4a7e60c038c4e87d47bcd050dc107e9b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AQUAS_Lite
+    className: AQUAS_Lite_CamNav
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -958,6 +963,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Cameras
     className: HandHeldCam
+  - hash:
+      serializedVersion: 2
+      Hash: b62fcda01313d39a68c9b7614e38e2a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AQUAS_Lite
+    className: AQUAS_Lite_Reflection
   - hash:
       serializedVersion: 2
       Hash: b294ba655397a2a6c58cddd17cea876c
@@ -1158,7 +1169,7 @@ ScriptsOnlyBuild:
     className: Explosive
   - hash:
       serializedVersion: 2
-      Hash: 07f65dacf06758ca2ecfcea0b89eb0b4
+      Hash: ace29c6f2be301c14757ae49b933dc9c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Axe
