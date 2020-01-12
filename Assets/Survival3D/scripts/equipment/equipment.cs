@@ -51,6 +51,7 @@ public class equipment : MonoBehaviour
             Cursor.visible = didViewInventory;//Ukrycie pokazanie kursora myszy.
             if (didViewInventory == true)
             {
+                Crafting.didViewCrafting = false;
                 Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.
             }
         }
@@ -105,6 +106,12 @@ public class equipment : MonoBehaviour
                 objectDragg = listItemToolbar[i];
                 listItemToolbar[i] = new Object();
                 didObjectDragg = true;
+            }
+
+            //używanie przedmiotów
+            if (toolbarLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(1))
+            {
+                useObjectToolbar(listItemToolbar[i].id, i, !listItemToolbar[i].isWeapon, listItemToolbar[i].isWeapon);
             }
 
             i++;
@@ -247,6 +254,54 @@ public class equipment : MonoBehaviour
             if (id == 3)
             {
                 if (HUD.actualDesire <= 75) { HUD.actualDesire += 25;  } else { HUD.actualDesire = 100; }
+            }
+            if (id == 4)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+        }
+    }
+
+    void useObjectToolbar(int id, int slotNumber, bool didDelete, bool isWeapon)
+    {
+        if (isWeapon == true && didObjectDragg == false)
+        {
+            GameObject objekt = Instantiate(listItemToolbar[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
+            objekt.name = listItemToolbar[slotNumber].name;
+            objekt.transform.parent = FPSCon.transform;
+            draggedObject = objekt;
+            didObjectDragg = true;
+        }
+
+        if (isWeapon == true && didObjectDragg == true)
+        {
+            Destroy(draggedObject.gameObject);
+            GameObject objekt = Instantiate(listItemToolbar[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
+            objekt.name = listItemToolbar[slotNumber].name;
+            objekt.transform.parent = FPSCon.transform;
+            draggedObject = objekt;
+
+        }
+
+        if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity == 1 && timeUseObject + 1 < DayNightCycle.actualTime)
+        {
+            listItemToolbar[slotNumber] = new Object();
+            if (id == 3)
+            {
+                if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
+            }
+            if (id == 4)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+        }
+        else if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity > 1 && timeUseObject + 1 < DayNightCycle.actualTime)
+        {
+            timeUseObject = DayNightCycle.actualTime;
+            listItemToolbar[slotNumber].stackedQuantity -= 1;
+            if (id == 3)
+            {
+                if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
             }
             if (id == 4)
             {

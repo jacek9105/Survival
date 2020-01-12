@@ -14,22 +14,22 @@ public class AnimationController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && equipment.didViewInventory == false && Crafting.didViewCrafting == false)
         {
             anim.Play("Run", -1, 0f);
         }
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && equipment.didViewInventory == false && Crafting.didViewCrafting == false)
         {
             anim.Play("Swing01", -1, 0f);
         }
            
-        if (Input.GetMouseButtonDown(1) && equipment.didViewInventory == false)
+        if (Input.GetMouseButtonDown(1) && equipment.didViewInventory == false && Crafting.didViewCrafting == false)
         {
             anim.Play("Swing02", -1, 0f);
         }
 
-        if (Input.GetMouseButtonDown(2))
+        if (Input.GetMouseButtonDown(2) && equipment.didViewInventory == false && Crafting.didViewCrafting == false)
         {
             anim.Play("PunchLeft", -1, 0f);
         }

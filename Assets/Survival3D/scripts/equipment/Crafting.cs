@@ -9,7 +9,7 @@ public class Crafting : MonoBehaviour
     public GUISkin skin;
     int numberSocketsX;
     int numberSocketsY;
-    bool didViewCrafting;
+    static public bool didViewCrafting;
     public string info;
     bool haveId1;
     bool haveId2;
@@ -27,19 +27,13 @@ public class Crafting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             didViewCrafting = !didViewCrafting;
-
             Cursor.visible = didViewCrafting;//Ukrycie pokazanie kursora myszy.
             if (didViewCrafting == true)
             {
-                //Cursor.lockState = CursorLockMode.Locked;
-                //Cursor.visible = true;//Pokazanie kursora.
                 Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.
-                Time.timeScale = 0;
+                 equipment.didViewInventory = false;
             }
-            else
-            {
-                Time.timeScale = 1;
-            }
+
 
         }
         if (Input.GetKeyUp(KeyCode.Escape))
