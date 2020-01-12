@@ -58,7 +58,7 @@ public class pickingUpItem : MonoBehaviour
                     }
                 }
 
-
+                canLift = false;
             }
         }
 

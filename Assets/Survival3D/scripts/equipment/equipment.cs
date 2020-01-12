@@ -6,6 +6,7 @@ public class equipment : MonoBehaviour
 {
     public List<Object> listOwnedItem = new List<Object>();
     public List<Object> listItemToolbar = new List<Object>();
+
     public Object objectDragg;
     public bool didViewInventory;
 
@@ -18,6 +19,7 @@ public class equipment : MonoBehaviour
     int previousSlot;
     public string displayDescription;
 
+    public GameObject draggedObject;
     public GameObject FPSCon;
     public GUISkin skin;
     public Transform handPosition;
@@ -59,6 +61,10 @@ public class equipment : MonoBehaviour
         {
             didViewInventory = false;
         }
+        if(didViewInventory == false)
+        {
+            displayDescription = null;
+        }
 
     }
 
@@ -85,7 +91,7 @@ public class equipment : MonoBehaviour
         int i = 0;
         for(int j=0;j<numberSocketsToolbar;j++)
         {
-            Rect toolbarLocation = new Rect(Screen.width * 0.25f + (j * Screen.width * 0.075f), Screen.height * 0.85f , Screen.width * 0.07f, Screen.height * 0.13f);
+            Rect toolbarLocation = new Rect(Screen.width * 0.35f + (j * Screen.width * 0.075f), Screen.height * 0.85f , Screen.width * 0.07f, Screen.height * 0.13f);
             GUI.Box(toolbarLocation, "", skin.GetStyle("slotEkwipunku"));
 
             if(listItemToolbar[i].id != 0)
@@ -184,10 +190,10 @@ public class equipment : MonoBehaviour
                     listOwnedItem[i] = objectDragg;
                     didObjectDragg = false;
                 }
-                //usuwanie przedmiotów
+                //używanie przedmiotów
                 if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(1))
                 {
-                    useObject(listOwnedItem[i].id, i, true, listOwnedItem[i].isWeapon);
+                    useObject(listOwnedItem[i].id, i, !listOwnedItem[i].isWeapon, listOwnedItem[i].isWeapon);
                 }
 
                 // wyświetlanie informacji o przedmiotach
@@ -210,16 +216,45 @@ public class equipment : MonoBehaviour
 
     void useObject(int id, int slotNumber, bool didDelete, bool isWeapon)
     {
-        if (isWeapon == true)
+        if (id == 3)
+        {
+            if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else {HUD.actualDesire = 100; }
+        }
+        if( id == 4)
+        {
+            if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+        }
+
+        if (isWeapon == true && didObjectDragg == false)
         {
             GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
             objekt.name = listOwnedItem[slotNumber].name;
             objekt.transform.parent = FPSCon.transform;
+            draggedObject= objekt;
+            didObjectDragg = true;
         }
-        if (didDelete)
+        if (isWeapon == true && didObjectDragg == true)
+        {
+            Destroy(draggedObject.gameObject);
+            GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
+            objekt.name = listOwnedItem[slotNumber].name;
+            objekt.transform.parent = FPSCon.transform;
+            draggedObject = objekt;
+            
+        }
+
+        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity == 1)
         {
             listOwnedItem[slotNumber] = new Object();
         }
+        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1)
+        {
+            listOwnedItem[slotNumber].stackedQuantity -= 1;
+        }
 
     }
+
+    //skróty klawiszowe
+
+
 }

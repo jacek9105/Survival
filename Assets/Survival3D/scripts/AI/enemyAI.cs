@@ -17,12 +17,16 @@ public class enemyAI : MonoBehaviour
     public float movespeed = 5.0f;
     //Zasięg wzroku przeciwnika
     public float range = 30.0f;
+    //zabiera nam życie gdy się zbliży
+    public float rangeDamage = 2.0f;
     //odstęp wroga od gracza - zatrzymania
     public float distanceFromPlayer = 2f;
     //aktualna wysokość skoku
     public float strokeHeight = 0f;
 
     public bool ghost;
+
+    public float timeDamage;
 
 
     
@@ -34,7 +38,7 @@ public class enemyAI : MonoBehaviour
         enemy = transform;
         GameObject go = GameObject.FindWithTag("Player");
         player = go.transform;
-
+        timeDamage = 0;
     }
 
     // Update is called once per frame
@@ -42,8 +46,14 @@ public class enemyAI : MonoBehaviour
     {
         //Pobranie dystansu dzielącaego wroga od gracza
         float distance = Vector3.Distance(enemy.position, player.position);
-
+        //jeżeli wróg jest za blisko to nam odejmuje życie
+        if (distance < rangeDamage && timeDamage + 3 < DayNightCycle.actualTime)
+        {
+            HUD.actualHP -= 15;
+            timeDamage = DayNightCycle.actualTime;
+        }
         //Jeżeli wróg jest w odpowiedniej odległości to zaczyna się poruszać w stgronę gracza
+
         if (distance < range && distance > distanceFromPlayer)
         {
 
