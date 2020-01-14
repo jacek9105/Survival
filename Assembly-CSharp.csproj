@@ -75,6 +75,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Survival3D\MATT\Scripts\AnimationControl\AnimationController.cs" />
+     <Compile Include="Assets\Survival3D\MATT\Scripts\DisplayText.cs" />
      <Compile Include="Assets\Survival3D\MATT\Scripts\MenuUI\MenuUI.cs" />
      <Compile Include="Assets\Survival3D\MATT\Scripts\WeaponsSwitch\WeaponSwitch.cs" />
      <Compile Include="Assets\Survival3D\scripts\AI\enemyAI.cs" />
