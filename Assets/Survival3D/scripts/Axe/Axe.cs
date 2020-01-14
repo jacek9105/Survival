@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Axe : MonoBehaviour
 {
-    // public Animation anim;
+  //  public Animation anim;
     public bool hitAble;
     public bool hited;
     //public AudioSource chopSound;
@@ -17,9 +17,11 @@ public class Axe : MonoBehaviour
     }
 
     // Update is called once per frame
-    /* void Update()
+     void Update()
      {
-         if(Input.GetMouseButtonDown(0) && hitAble == true)
+        /*
+
+        if (Input.GetMouseButtonDown(0) && hitAble == true)
          {
              anim.Play();
          }
@@ -34,7 +36,8 @@ public class Axe : MonoBehaviour
              hitAble = false;
              hited = true;
          }
-     }*/
+         */
+     }
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Tree" && hited == true)
@@ -44,6 +47,7 @@ public class Axe : MonoBehaviour
             collider.gameObject.GetComponent<Tree_Felling>().TreeHP -= 1;
                // chopSound.Play();
             }
+                 
             /*if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP <= 0)
             {
                 for(int i = 0; i<eq.listOwnedItem.Count; i++)
@@ -55,6 +59,13 @@ public class Axe : MonoBehaviour
                     }
                 }
             }*/
+        }
+        if(collider.tag == "Enemy")
+        {
+            if(collider.gameObject.GetComponent<pigHP>().pigHealtPoints >= 0)
+            {
+                collider.gameObject.GetComponent<pigHP>().pigHealtPoints -= 1;
+            }
         }
     }
 

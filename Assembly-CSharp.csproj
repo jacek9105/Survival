@@ -96,6 +96,7 @@
     <Compile Include="Assets\Survival3D\scripts\equipment\Object.cs" />
     <Compile Include="Assets\Survival3D\scripts\equipment\pickingUpItem.cs" />
     <Compile Include="Assets\Survival3D\scripts\HUD\HUD.cs" />
+    <Compile Include="Assets\Survival3D\scripts\Pig Destroy\pigHP.cs" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\AQUAS-Lite\Shaders\AQUAS-Lite_Backface.shader" />
     <None Include="Assets\AQUAS-Lite\Readme.txt" />
