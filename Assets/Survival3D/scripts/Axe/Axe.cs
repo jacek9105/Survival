@@ -39,12 +39,12 @@ public class Axe : MonoBehaviour
     {
         if (collider.tag == "Tree" && hited == true)
         {
-            if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP > -2)
+            if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP >= 0)
             { 
             collider.gameObject.GetComponent<Tree_Felling>().TreeHP -= 1;
                // chopSound.Play();
             }
-            if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP <= 0)
+            /*if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP <= 0)
             {
                 for(int i = 0; i<eq.listOwnedItem.Count; i++)
                 {
@@ -54,7 +54,7 @@ public class Axe : MonoBehaviour
                         break;
                     }
                 }
-            }
+            }*/
         }
     }
 
