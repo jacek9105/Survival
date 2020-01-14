@@ -10768,7 +10768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pigHealtPoints: 0
-  trunk: {fileID: 471490, guid: 2ca5d0240f70cf148bde4753c75f5cdb, type: 3}
+  meal: {fileID: 471490, guid: 2ca5d0240f70cf148bde4753c75f5cdb, type: 3}
   pig: {fileID: 704730086}
 --- !u!1 &705507993
 GameObject:
