@@ -12,8 +12,8 @@ public class Crafting : MonoBehaviour
     static public bool didViewCrafting;
     public string info;
     bool haveId1;
-    bool haveId2;
     bool haveId3;
+    bool canCraft;
     void Start()
     {
         numberSocketsX = 5;
@@ -76,6 +76,10 @@ public class Crafting : MonoBehaviour
                     info = null;
                 }
 
+                if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButton(0))
+                {
+                    CreateItem(Database.itemCraftingList[i].id);
+                }
                 i++;
             }
         }
@@ -99,18 +103,32 @@ public class Crafting : MonoBehaviour
     {
         if(id == 3)
         {
-
+            CheckItem(2);
+            if (canCraft == true)
+            {
+                Debug.Log("Mozemy craftowac");
+            }
         }
     }
 
-    void CheckItem(int id1, int id2=0, int id3=0)
+    void CheckItem(int id1, int id3=0) //tyle zmiennych ile id w craftingu database
     {
+        canCraft = false;
+
         for(int x = 0; x<equipment.listOwnedItem.Count; x++)
         {
             if(equipment.listOwnedItem[x].id == id1)
             {
                 haveId1 = true;
             }
+            if (equipment.listOwnedItem[x].id == id3)
+            {
+                haveId3 = true;
+            }
+        }
+        if (haveId1 == true && haveId3 == true)
+        {
+            canCraft = true;
         }
     }
 }
