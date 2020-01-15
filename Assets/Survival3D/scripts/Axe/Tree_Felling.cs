@@ -11,6 +11,7 @@ public class Tree_Felling : MonoBehaviour
     public GameObject tree;
     void Start()
     {
+        TreeHP = 5;
         tree = this.gameObject; //new
         rigidBody.isKinematic = true;
     }

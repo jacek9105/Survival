@@ -40,7 +40,7 @@ public class Axe : MonoBehaviour
      }
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.tag == "Tree" && hited == true)
+        if (collider.tag == "Tree")
         {
             if(collider.gameObject.GetComponent<Tree_Felling>().TreeHP >= 0)
             { 
