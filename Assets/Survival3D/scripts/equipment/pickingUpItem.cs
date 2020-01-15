@@ -84,9 +84,9 @@ public class pickingUpItem : MonoBehaviour
 
     private void OnGUI()
     {
-        if (canLift == true && itemToPick != null)
+        if (canLift == true)
         {
-            GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 200, 200), "Press e to lift item", skin.GetStyle("Lift"));
+            GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 200, 200), "Push e to lift item", skin.GetStyle("Lift"));
         }
     }
 }
