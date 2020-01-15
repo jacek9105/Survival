@@ -6,10 +6,10 @@ public class pickingUpItem : MonoBehaviour
 {
     public GameObject itemToPick;
     public GUISkin skin;
-    bool canLift;
+    private bool canLift;
     bool didStacked;
     int i;
-    int idItem;
+    private int idItem;
     public static int maxStack;
 
     public equipment equipment;
@@ -84,9 +84,9 @@ public class pickingUpItem : MonoBehaviour
 
     private void OnGUI()
     {
-        if (canLift == true && Database.itemList[i].id < 20)
+        if (canLift == true &&  itemToPick != null)//Database.itemList[i].id < 20)
         {
-            GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 200, 200), "Push e to lift item", skin.GetStyle("Lift"));
+            GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 200, 200), "Press e to lift item", skin.GetStyle("Lift"));
         }
     }
 }

@@ -129,8 +129,10 @@ public class equipment : MonoBehaviour
             {
                 Rect slotLocation = new Rect(Screen.width * 0.05f + (x * Screen.width * 0.075f), Screen.height * 0.05f + (y * Screen.height * 0.13f), Screen.width * 0.07f, Screen.height * 0.13f);
                 GUI.Box(slotLocation, "", skin.GetStyle("slotEkwipunku"));
-                
-                
+
+                GUI.Box(new Rect(Screen.width * 0.2f, Screen.height * 0.01f, 200, 200), "Inventory", skin.GetStyle("TextDisplay"));
+
+
                 if (listOwnedItem[i].id != 0)
                 {
                     GUI.DrawTexture(slotLocation, listOwnedItem[i].objectIcons);
@@ -244,6 +246,10 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 15; } else { HUD.actualHunger = 100; }
+            }
+            if(id==5)
+            {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
         }
@@ -256,6 +262,10 @@ public class equipment : MonoBehaviour
                 if (HUD.actualDesire <= 75) { HUD.actualDesire += 25;  } else { HUD.actualDesire = 100; }
             }
             if (id == 4)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+            if (id == 5)
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }

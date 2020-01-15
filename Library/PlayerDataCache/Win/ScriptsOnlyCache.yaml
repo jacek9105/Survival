@@ -9,26 +9,42 @@ ScriptsOnlyBuild:
     - Crafting
     - Database
     - DayNightCycle
+    - DisplayText
     - HUD
     - MenuUI
-    - Readme
     - Tree_Felling
     - WeaponSwitch
     - enemyAI
     - equipment
     - itemToLift
     - pickingUpItem
+    - pigHP
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.Experimental.TerrainAPI.BillowNoise
+    - UnityEditor.Experimental.TerrainAPI.BridgeTool
+    - UnityEditor.Experimental.TerrainAPI.CloneBrushTool
+    - UnityEditor.Experimental.TerrainAPI.ContrastTool
     - UnityEditor.Experimental.TerrainAPI.FbmFractalType
+    - UnityEditor.Experimental.TerrainAPI.MeshStampTool
     - UnityEditor.Experimental.TerrainAPI.NoiseBlitShaderGenerator
     - UnityEditor.Experimental.TerrainAPI.NoiseFillShaderGenerator
+    - UnityEditor.Experimental.TerrainAPI.NoiseHeightTool
     - UnityEditor.Experimental.TerrainAPI.NoneFractalType
+    - UnityEditor.Experimental.TerrainAPI.PaintHeightTool
+    - UnityEditor.Experimental.TerrainAPI.PaintTextureTool
     - UnityEditor.Experimental.TerrainAPI.PerlinNoise
     - UnityEditor.Experimental.TerrainAPI.RidgeNoise
+    - UnityEditor.Experimental.TerrainAPI.SetHeightTool
+    - UnityEditor.Experimental.TerrainAPI.SharpenPeaksTool
+    - UnityEditor.Experimental.TerrainAPI.SlopeFlattenTool
+    - UnityEditor.Experimental.TerrainAPI.SmoothHeightTool
+    - UnityEditor.Experimental.TerrainAPI.StampTool
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
+    - UnityEditor.Experimental.TerrainAPI.TerraceErosion
+    - UnityEditor.Experimental.TerrainAPI.ThermalErosionTool
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
+    - UnityEditor.Experimental.TerrainAPI.WindErosionTool
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -37,6 +53,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -93,53 +110,57 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 696}
+      Script: {instanceID: 698}
     - Class: 114
-      Script: {instanceID: 9802}
+      Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 9814}
+      Script: {instanceID: 9816}
     - Class: 114
-      Script: {instanceID: 9878}
+      Script: {instanceID: 9880}
     - Class: 114
-      Script: {instanceID: 9912}
+      Script: {instanceID: 9914}
     - Class: 114
-      Script: {instanceID: 10002}
+      Script: {instanceID: 10004}
     - Class: 114
-      Script: {instanceID: 10052}
+      Script: {instanceID: 10054}
     - Class: 114
-      Script: {instanceID: 10288}
+      Script: {instanceID: 10290}
     - Class: 114
-      Script: {instanceID: 10492}
+      Script: {instanceID: 10494}
     - Class: 114
-      Script: {instanceID: 10978}
+      Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11002}
+      Script: {instanceID: 11004}
     - Class: 114
-      Script: {instanceID: 11038}
+      Script: {instanceID: 11028}
     - Class: 114
-      Script: {instanceID: 11108}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 11112}
     - Class: 114
-      Script: {instanceID: 11272}
+      Script: {instanceID: 11182}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11452}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11680}
     - Class: 114
-      Script: {instanceID: 11976}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 11990}
+      Script: {instanceID: 11980}
+    - Class: 114
+      Script: {instanceID: 11994}
+    - Class: 114
+      Script: {instanceID: 12050}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -473,7 +494,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: c223f09cbf6f3a174512b9753ad4952b
+      Hash: 4f96fcd27303a1b449057635a19da396
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tree_Felling
@@ -833,13 +854,19 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 5b6f02e9b27bbf1cb2995cfe4dead22d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: pigHP
+  - hash:
+      serializedVersion: 2
       Hash: 8216ca00094987954bcf22fd5ccf9bfd
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Cameras
     className: FreeLookCam
   - hash:
       serializedVersion: 2
-      Hash: 69953361d1720c8daf8ec6766d858019
+      Hash: 8ee4587679201466289749da41d92dbe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: equipment
@@ -1275,6 +1302,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: 3312a0882e2fee78fcc74e3760eac8cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisplayText
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
