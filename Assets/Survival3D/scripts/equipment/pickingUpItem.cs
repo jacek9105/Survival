@@ -7,8 +7,8 @@ public class pickingUpItem : MonoBehaviour
     public GameObject itemToPick;
     public GUISkin skin;
     bool canLift;
-    bool didStacked; 
-
+    bool didStacked;
+    int i;
     int idItem;
     public static int maxStack;
 
@@ -84,7 +84,7 @@ public class pickingUpItem : MonoBehaviour
 
     private void OnGUI()
     {
-        if (canLift == true)
+        if (canLift == true && Database.itemList[i].id < 20)
         {
             GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 200, 200), "Push e to lift item", skin.GetStyle("Lift"));
         }
