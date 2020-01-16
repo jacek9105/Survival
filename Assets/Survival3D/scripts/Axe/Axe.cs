@@ -60,13 +60,13 @@ public class Axe : MonoBehaviour
                 }
             }*/
         }
-        if(collider.tag == "Enemy")
+    /*    if(collider.tag == "Enemy")
         {
             if(collider.gameObject.GetComponent<pigHP>().pigHealtPoints >= 0)
             {
                 collider.gameObject.GetComponent<pigHP>().pigHealtPoints -= 1;
             }
-        }
+        }*/
     }
 
 }
