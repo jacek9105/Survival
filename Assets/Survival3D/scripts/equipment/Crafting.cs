@@ -54,8 +54,9 @@ public class Crafting : MonoBehaviour
     }
     void viewCrafiting()
     {
+        
         int i = 0;
-
+        
         for (int x = 0; x < numberSocketsX; x++)
         {
             for (int y = 0; y < numberSocketsY; y++)
@@ -66,12 +67,12 @@ public class Crafting : MonoBehaviour
                 {
                 GUI.DrawTexture(slotLocation, Database.itemCraftingList[i].objectIcons);
                 }
-
+               
                 if (slotLocation.Contains(Event.current.mousePosition) && Database.itemCraftingList[i].id !=0)
                 {
                     CraftingInfo(Database.itemCraftingList[i].id);
                 }
-                if(slotLocation.Contains(Event.current.mousePosition) && Database.itemCraftingList[i].id == 0)
+                else if (slotLocation.Contains(Event.current.mousePosition) && Database.itemCraftingList[i].id == 0)
                 {
                     info = null;
                 }
