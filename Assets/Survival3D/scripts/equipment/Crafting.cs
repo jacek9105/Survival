@@ -12,6 +12,7 @@ public class Crafting : MonoBehaviour
     static public bool didViewCrafting;
     public string info;
     bool haveId1;
+    bool haveId2;
     bool haveId3;
     bool canCraft;
     void Start()
@@ -19,6 +20,7 @@ public class Crafting : MonoBehaviour
         numberSocketsX = 5;
         numberSocketsY = 4;
         info = null;
+        
     }
 
 
@@ -31,7 +33,8 @@ public class Crafting : MonoBehaviour
             if (didViewCrafting == true)
             {
                 Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.
-                 equipment.didViewInventory = false;
+                equipment.didViewInventory = false;
+              
             }
 
 
@@ -89,22 +92,22 @@ public class Crafting : MonoBehaviour
     void CraftingInfo(int id)
     {
 
-        if (id == 3)
+        if (id == 3) // butelka
         {
             info = "Needed items:" + "\n" + "bottle";
         }
-        if (id == 1)
+        if (id == 1) // axe
         {
             info = "Needed items:" + "\n" + "stone" + "\n" + "wood";
         }
 
     }
-    // tak samo jak wyzej 
-    void  CreateItem(int id)
+    // dla kazdego przedmiotu z database z craftingu musimy tutaj wpisac info id musi sie zgadzac
+    void CreateItem(int id)
     {
         if(id == 3)
         {
-            CheckItem(2);
+            CheckItem(1);
             if (canCraft == true)
             {
                 Debug.Log("Mozemy craftowac");
@@ -112,7 +115,7 @@ public class Crafting : MonoBehaviour
         }
     }
 
-    void CheckItem(int id1, int id3=0) //tyle zmiennych ile id w craftingu database
+    void CheckItem(int id1, int id2 =0, int id3 =0) //tyle zmiennych ile id w craftingu database
     {
         canCraft = false;
 
@@ -122,12 +125,16 @@ public class Crafting : MonoBehaviour
             {
                 haveId1 = true;
             }
+            if(equipment.listOwnedItem[x].id == id2)
+            {
+                haveId2 = true;
+            }
             if (equipment.listOwnedItem[x].id == id3)
             {
                 haveId3 = true;
             }
         }
-        if (haveId1 == true && haveId3 == true)
+        if (haveId1 == true || haveId2 == true || haveId3 == true)
         {
             canCraft = true;
         }

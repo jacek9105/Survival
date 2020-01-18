@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 456240}
   - component: {fileID: 3330426}
   - component: {fileID: 2387910}
+  - component: {fileID: -3249550218552615255}
+  - component: {fileID: 5309051485415227715}
   m_Layer: 0
   m_Name: Wood-5tier log_n
-  m_TagString: Untagged
+  m_TagString: itemToPick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,3 +80,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-3249550218552615255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20890625, y: 0.83503646, z: 0.20890681}
+  m_Center: {x: -0.0000002682209, y: 0.41751805, z: 0.00000047683716}
+--- !u!114 &5309051485415227715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d6a63f5d0741d4db1ffd85dcfc0fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
