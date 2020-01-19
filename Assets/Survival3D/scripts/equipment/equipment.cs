@@ -230,6 +230,13 @@ public class equipment : MonoBehaviour
                 WeaponSwitch.didChange = true;
                 listOwnedItem[slotNumber] = new Object();
             }
+            if (id == 6)
+            {
+                WeaponSwitch.isAvaible1 = true;
+                WeaponSwitch.weaponSelected = 1;
+                WeaponSwitch.didChange = true;
+                listOwnedItem[slotNumber] = new Object();
+            }
             /*
             GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
             objekt.name = listOwnedItem[slotNumber].name;
