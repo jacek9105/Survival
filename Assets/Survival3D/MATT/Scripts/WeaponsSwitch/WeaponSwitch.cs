@@ -4,21 +4,38 @@ using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour
 {
-    
-    int weaponSelected = 1;
+
+    static public int weaponSelected;
+    static public bool isAvaible1, isAvaible2, didChange;
 
     [SerializeField]
     GameObject primary, secondary, melee;
 
     void Start()
     {
-        SwapWeapon(1);
+        SwapWeapon(3);
+        isAvaible1 = false;
+        isAvaible2 = false;
+        didChange = false;
+
     }
 
     void Update()
     {
-     
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (weaponSelected == 1 && didChange == true)
+        {
+            SwapWeapon(1);
+
+            didChange = false;
+        }
+        if (weaponSelected == 2 && didChange == true)
+        {
+            SwapWeapon(2);
+
+            didChange = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) && isAvaible1 == true)
         {
             if(weaponSelected != 1)
             {
@@ -26,7 +43,7 @@ public class WeaponSwitch : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && isAvaible2 == true)
         {
             if (weaponSelected != 2)
             {
@@ -42,9 +59,12 @@ public class WeaponSwitch : MonoBehaviour
             }
         }
 
+
+
     }
 
-    void SwapWeapon(int weaponType)
+
+    public void SwapWeapon(int weaponType)
     {
         if(weaponType == 1)
         {
