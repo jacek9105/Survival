@@ -125,11 +125,8 @@ public class Crafting : MonoBehaviour
     {
         if(id == 1)
         {
-            CheckItem(2); //sprawdzamy jeden item
-            if(canCraft == true) //jezeli true to sprawdzam kolejny item
-            {
-                CheckItem(3);
-            }
+            CheckItem(2,3); //sprawdzamy jeden item
+          
             
             if (canCraft == true) //&& craftedItem == false
             {
@@ -160,7 +157,7 @@ public class Crafting : MonoBehaviour
                             equipment.listOwnedItem[x].stackedQuantity -= 1;
                             canCraft = false;
                             //craftedItem = true;
-                            addItem(3);
+                            addItem(1);
                             break;
                         }
                         else
@@ -169,7 +166,7 @@ public class Crafting : MonoBehaviour
                             equipment.listOwnedItem[x] = new Object();
                             canCraft = false;
                             //craftedItem = true;
-                            addItem(3);
+                            addItem(1);
                             break;
                         }
                     }

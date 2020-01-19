@@ -42,6 +42,11 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
+        actualDesire = Mathf.Clamp(actualDesire, 0, 100);
+        actualHP = Mathf.Clamp(actualHP, 0, 100);
+        actualHunger = Mathf.Clamp(actualHunger, 0, 100);
+        actualStamina = Mathf.Clamp(actualStamina, 0, 100);
+
         hpBar.transform.localScale = new Vector3(actualHP / maxHP, 1, 0);
         desireBar.transform.localScale = new Vector3(actualDesire / maxDesire, 1, 0);
         hungerBar.transform.localScale = new Vector3(actualHunger / maxHunger, 1, 0);
@@ -51,25 +56,6 @@ public class HUD : MonoBehaviour
         actualHunger -= 0.25f * Time.deltaTime;
 
       
-
-        if (actualStamina < 0)
-        {
-            actualStamina = 0;
-        }
-        if (actualHP <0)
-        {
-            actualHP = 0;
-        }
-        if (actualHunger < 0)
-        {
-            actualHunger = 0;
-        }
-        if (actualDesire < 0)
-        {
-            actualDesire = 0;
-        }
-
-
 
         if (actualDesire < 5 || actualHunger < 5)
         {
