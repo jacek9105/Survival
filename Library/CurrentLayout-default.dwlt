@@ -382,7 +382,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 34}
+      scrollPos: {x: 0, y: 18}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 5afbffff
@@ -445,9 +445,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1718.5306, y: 72.57992, z: 311.1804}
+    m_Target: {x: 1718.73, y: 72.20474, z: 310.75867}
     speed: 2
-    m_Value: {x: 1718.5306, y: 72.57992, z: 311.1804}
+    m_Value: {x: 1718.73, y: 72.20474, z: 310.75867}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -476,13 +476,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.047430128, y: 0.7944761, z: -0.06258725, w: -0.60221046}
+    m_Target: {x: -0.05727273, y: 0.8073031, z: -0.07946415, w: -0.58196545}
     speed: 2
-    m_Value: {x: -0.047429737, y: 0.79446954, z: -0.06258673, w: -0.6022055}
+    m_Value: {x: -0.05727225, y: 0.80729634, z: -0.07946349, w: -0.5819606}
   m_Size:
-    m_Target: 6.248795
+    m_Target: 23.596458
     speed: 2
-    m_Value: 6.248795
+    m_Value: 23.596458
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -611,19 +611,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Survival3D/Trunk/PreFabs/Natural/Wood
+    - Assets/Survival3D/scripts/equipment
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Survival3D/Trunk/PreFabs/Natural/Wood
+  - Assets/Survival3D/scripts/equipment
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\GIT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 454}
-    m_SelectedIDs: 78450000
-    m_LastClickedID: 17784
+    scrollPos: {x: 0, y: 274}
+    m_SelectedIDs: ae390000
+    m_LastClickedID: 14766
     m_ExpandedIDs: 00000000b63000007231000004320000063200002432000096320000a0330000f633000002370000fe3700007c3800002c3a0000803a0000ba3b0000bc3b0000263c0000aa3c0000043d00008e3d0000e63d00009c3e0000163f00007c3f0000803f0000ea3f00001e4000005a4300000a5100000c51000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b630000072310000043200000632000024320000a0330000f633000002370000fe3700007c3800002c3a0000803a0000ba3b0000263c0000aa3c0000043d00008e3d0000e63d00009c3e0000163f00007c3f0000803f0000ea3f00001e4000005a4300000a5100000c510000
+    m_ExpandedIDs: 00000000b63000007231000004320000063200002432000096320000a0330000f633000002370000fe3700007c3800002c3a0000803a0000ba3b0000bc3b0000263c0000aa3c0000043d00008e3d0000e63d00009c3e0000163f00007c3f0000803f0000ea3f00001e4000005a4300000a5100000c510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -677,9 +677,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 024a0000
+    m_LastClickedInstanceID: 18946
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a86200000a540000be53000058340000a64c0000985500003c550000a64100000ab60000e640000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -802,53 +802,3 @@ MonoBehaviour:
   m_PosRight: {x: 0, y: 0}
   m_Scope: 1
   m_SplitterFlex: 0.2
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12059, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEditor:UnityEditor.Experimental.TerrainAPI:PaintTextureTool
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Failed to load
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 320
-    height: 550
-  m_ViewDataDictionary: {fileID: 0}
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12059, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEditor:UnityEditor.Experimental.TerrainAPI:SetHeightTool
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Failed to load
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 320
-    height: 550
-  m_ViewDataDictionary: {fileID: 0}

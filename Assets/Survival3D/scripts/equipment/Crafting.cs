@@ -15,6 +15,7 @@ public class Crafting : MonoBehaviour
     bool haveId2;
     bool haveId3;
     bool canCraft;
+    private float timeCraftingItem;
     void Start()
     {
         numberSocketsX = 5;
@@ -80,8 +81,9 @@ public class Crafting : MonoBehaviour
                     info = null;
                 }
 
-                if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButton(0))
+                if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(0) && timeCraftingItem + 1 < DayNightCycle.actualTime)
                 {
+                   timeCraftingItem = DayNightCycle.actualTime;
                     CreateItem(Database.itemCraftingList[i].id);
                 }
                 i++;
@@ -107,7 +109,7 @@ public class Crafting : MonoBehaviour
     {
         if(id == 3)
         {
-            CheckItem(1);
+            CheckItem(2);
             if (canCraft == true)
             {
                 Debug.Log("Mozemy craftowac");
@@ -134,7 +136,7 @@ public class Crafting : MonoBehaviour
                 haveId3 = true;
             }
         }
-        if (haveId1 == true || haveId2 == true || haveId3 == true)
+        if (haveId1 == true && haveId2 == true && haveId3 == true)
         {
             canCraft = true;
         }
