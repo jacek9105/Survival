@@ -16,11 +16,16 @@ public class Crafting : MonoBehaviour
     bool haveId3;
     bool canCraft;
     private float timeCraftingItem;
+    bool craftedItem;
+    bool didStacked;
+    int maxStack = 3;
+    float time;
     void Start()
     {
         numberSocketsX = 5;
         numberSocketsY = 4;
         info = null;
+        time = 1;
         
     }
 
@@ -43,6 +48,15 @@ public class Crafting : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             didViewCrafting = false;
+        }
+        if(craftedItem == true)
+        {
+            time -= 1 * Time.deltaTime;
+            if(time <= 0)
+            {
+                craftedItem = false;
+                time = 1;
+            }
         }
     }
     private void OnGUI()
@@ -83,8 +97,10 @@ public class Crafting : MonoBehaviour
 
                 if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(0) && timeCraftingItem + 1 < DayNightCycle.actualTime)
                 {
-                   timeCraftingItem = DayNightCycle.actualTime;
+                    //craftedItem = false;
+                    timeCraftingItem = DayNightCycle.actualTime;
                     CreateItem(Database.itemCraftingList[i].id);
+                    
                 }
                 i++;
             }
@@ -96,30 +112,141 @@ public class Crafting : MonoBehaviour
 
         if (id == 3) // butelka
         {
-            info = "Needed items:" + "\n" + "bottle";
+            info = "Needed items:" + "\n" + "trunk";
         }
         if (id == 1) // axe
         {
-            info = "Needed items:" + "\n" + "stone" + "\n" + "wood";
+            info = "Needed items:" + "\n" + "trunk" + "\n" + "bottle";
         }
 
     }
     // dla kazdego przedmiotu z database z craftingu musimy tutaj wpisac info id musi sie zgadzac
     void CreateItem(int id)
     {
-        if(id == 3)
+        if(id == 1)
         {
-            CheckItem(2);
-            if (canCraft == true)
+            CheckItem(2); //sprawdzamy jeden item
+            if(canCraft == true) //jezeli true to sprawdzam kolejny item
             {
-                Debug.Log("Mozemy craftowac");
+                CheckItem(3);
+            }
+            
+            if (canCraft == true) //&& craftedItem == false
+            {
+                for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                {
+                    if(equipment.listOwnedItem[x].id == 2)
+                    {
+                        if(equipment.listOwnedItem[x].stackedQuantity > 1)
+                        {
+                            equipment.listOwnedItem[x].stackedQuantity -= 1;
+                            
+                            break;
+                        }
+                        else 
+                        if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                        {
+                            equipment.listOwnedItem[x] = new Object();
+                            break;
+                        }
+                    }
+                }
+                for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                {
+                    if (equipment.listOwnedItem[x].id == 3)
+                    {
+                        if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                        {
+                            equipment.listOwnedItem[x].stackedQuantity -= 1;
+                            canCraft = false;
+                            //craftedItem = true;
+                            addItem(3);
+                            break;
+                        }
+                        else
+                        if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                        {
+                            equipment.listOwnedItem[x] = new Object();
+                            canCraft = false;
+                            //craftedItem = true;
+                            addItem(3);
+                            break;
+                        }
+                    }
+                }
             }
         }
+        if (id == 3)
+        {
+            CheckItem(2);
+            if (canCraft == true) //&& craftedItem == false
+            {
+                for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                {
+                    if (equipment.listOwnedItem[x].id == 2)
+                    {
+                        if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                        {
+                            equipment.listOwnedItem[x].stackedQuantity -= 1;
+                            canCraft = false;
+                            //craftedItem = true;
+                            addItem(3);
+                            break;
+                        }
+                        else
+                        if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                        {
+                            equipment.listOwnedItem[x] = new Object();
+                            canCraft = false;
+                            //craftedItem = true;
+                            addItem(3);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        /*
+        --------------------=======================TWORZYMY KOLEJNY ITEM====================----------------
+        if (id == 3) // id == kolejnu id z itemcrafting list z database 
+        {
+            CheckItem(2); //id itemu z itemlist z database
+            if (canCraft == true) //&& craftedItem == false
+            {
+                for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                {
+                    if (equipment.listOwnedItem[x].id == 2)
+                    {
+                        if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                        {
+                            equipment.listOwnedItem[x].stackedQuantity -= 1;
+                            canCraft = false;
+                            //craftedItem = true;
+                            addItem(3);
+                            break;
+                        }
+                        else
+                        if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                        {
+                            equipment.listOwnedItem[x] = new Object();
+                            canCraft = false;
+                            //craftedItem = true;
+                            addItem(3);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        */
+
+
     }
 
     void CheckItem(int id1, int id2 =0, int id3 =0) //tyle zmiennych ile id w craftingu database
     {
         canCraft = false;
+       
 
         for(int x = 0; x<equipment.listOwnedItem.Count; x++)
         {
@@ -139,6 +266,34 @@ public class Crafting : MonoBehaviour
         if (haveId1 == true && haveId2 == true && haveId3 == true)
         {
             canCraft = true;
+        }
+    }
+    void addItem(int idItem)
+    {
+        if (didStacked == true)
+        {
+            for (int i = 0; i < equipment.listOwnedItem.Count; i++)
+            {
+                if (idItem == equipment.listOwnedItem[i].id && equipment.listOwnedItem[i].stackedQuantity < maxStack)
+                {
+                    equipment.listOwnedItem[i].stackedQuantity += 1;
+                    didStacked = true;
+                    break;
+                }
+                else { didStacked = false; }
+            }
+        }
+        if (didStacked == false)
+        {
+            for (int i = 0; i < equipment.listOwnedItem.Count; i++)
+            {
+                if (equipment.listOwnedItem[i].id == 0)
+                {
+                    equipment.listOwnedItem[i] = new Object(Database.itemList[idItem].id, Database.itemList[idItem].name, Database.itemList[idItem].description, Database.itemList[idItem].isWeapon, Database.itemList[idItem].stackedQuantity);
+                    didStacked = true;
+                    break;
+                }
+            }
         }
     }
 }
