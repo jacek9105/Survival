@@ -15,10 +15,14 @@ public class Crafting : MonoBehaviour
     bool haveId2;
     bool haveId3;
     bool canCraft;
+    bool haveNeededQuantity1; // 3 zmienne bo mamy 3 rozne rodzaje przedmiotow uzywanych w craftingu
+    bool haveNeededQuantity2;
+    bool haveNeededQuantity3;
     private float timeCraftingItem;
     bool craftedItem;
     bool didStacked;
     int maxStack = 3;
+    float itemCounter;
     float time;
     void Start()
     {
@@ -95,7 +99,7 @@ public class Crafting : MonoBehaviour
                     info = null;
                 }
 
-                if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(0) && timeCraftingItem + 1 < DayNightCycle.actualTime)
+                if (slotLocation.Contains(Event.current.mousePosition) && Input.GetMouseButtonUp(0) && timeCraftingItem + 1 < DayNightCycle.actualTime && craftedItem == false)
                 {
                     //craftedItem = false;
                     timeCraftingItem = DayNightCycle.actualTime;
@@ -173,7 +177,8 @@ public class Crafting : MonoBehaviour
                 }
             }
         }
-        if (id == 3)
+  /*     -----------------============KOMENTARZ DLA TESTOW DLA NEXT IF=========-------------------
+   *     if (id == 3)
         {
             CheckItem(2);
             if (canCraft == true) //&& craftedItem == false
@@ -202,6 +207,42 @@ public class Crafting : MonoBehaviour
                     }
                 }
             }
+        }
+    */
+        // -----------------=================CRAFTING Z WYKORZYSTANIEM WIECEJ PRZEDMIOTOW JEDNEGO RODZAJU!!!!===============-------------
+        if (id == 3)
+        {
+            CheckItem(2,0,0,3); // podajemy ile przedmiotow ktorego rodzaju potrzebujemy!! wywolujemy funkcje checkitem!!
+            if (canCraft == true) //&& craftedItem == false
+            {
+                addItem(3);
+                for(int i =0; i<3;i++)  // musimy wykonac nastepny for tyle razy ile potrzebujemy przedmiotow!! i musi być mniejsze od ilosci itemow ktore potrzebujemy
+                {                         
+                for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                {
+                    if (equipment.listOwnedItem[x].id == 2)
+                    {
+                        if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                        {
+                            equipment.listOwnedItem[x].stackedQuantity -= 1;
+                            canCraft = false;
+                            //craftedItem = true;
+                            
+                            break;
+                        }
+                        else
+                        if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                        {
+                            equipment.listOwnedItem[x] = new Object();
+                            canCraft = false;
+                            //craftedItem = true;
+                            
+                            break;
+                        }
+                    }
+                }
+            }
+        }
         }
         /*
         --------------------=======================TWORZYMY KOLEJNY ITEM====================----------------
@@ -240,27 +281,52 @@ public class Crafting : MonoBehaviour
 
     }
 
-    void CheckItem(int id1, int id2 =0, int id3 =0) //tyle zmiennych ile id w craftingu database
+    void CheckItem(int id1, int id2 =0, int id3 =0, float count1 = 1, float count2 = 0, float count3 = 0) //tyle zmiennych ile id w craftingu database
     {
         canCraft = false;
-       
+        itemCounter = 0;
+        haveNeededQuantity1 = false;
+        haveNeededQuantity2 = false;
+        haveNeededQuantity3 = false;
 
         for(int x = 0; x<equipment.listOwnedItem.Count; x++)
         {
             if(equipment.listOwnedItem[x].id == id1)
             {
                 haveId1 = true;
+                itemCounter = itemCounter + equipment.listOwnedItem[x].stackedQuantity;
+                if(itemCounter >= count1)
+                {
+                    haveNeededQuantity1 = true;
+                }
+                Debug.Log(itemCounter);
             }
             if(equipment.listOwnedItem[x].id == id2)
             {
+                itemCounter = 0;
                 haveId2 = true;
+                itemCounter = itemCounter + equipment.listOwnedItem[x].stackedQuantity;
+                if (itemCounter >= count2)
+                {
+                    haveNeededQuantity2 = true;
+                }
+                Debug.Log(itemCounter);
             }
             if (equipment.listOwnedItem[x].id == id3)
             {
+                itemCounter = 0;
                 haveId3 = true;
+                itemCounter = itemCounter + equipment.listOwnedItem[x].stackedQuantity;
+
+                if (itemCounter >= count3)
+                {
+                    haveNeededQuantity3 = true;
+                }
+                Debug.Log(itemCounter);
             }
+
         }
-        if (haveId1 == true && haveId2 == true && haveId3 == true)
+        if (haveId1 == true && haveId2 == true && haveId3 == true && haveNeededQuantity1 == true && haveNeededQuantity2 == true && haveNeededQuantity3 == true)
         {
             canCraft = true;
         }
