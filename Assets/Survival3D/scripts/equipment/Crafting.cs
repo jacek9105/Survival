@@ -35,7 +35,8 @@ public class Crafting : MonoBehaviour
 
 
     void Update()
-    {   
+    {
+        info = null;
         if (Input.GetKeyDown(KeyCode.P))
         {
             didViewCrafting = !didViewCrafting;
