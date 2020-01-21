@@ -35,7 +35,7 @@ public class WeaponSwitch : MonoBehaviour
             didChange = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && isAvaible1 == true)
+        if (Input.GetKeyDown(KeyCode.F1) && isAvaible1 == true)
         {
             if(weaponSelected != 1)
             {
@@ -43,7 +43,7 @@ public class WeaponSwitch : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && isAvaible2 == true)
+        if (Input.GetKeyDown(KeyCode.F2) && isAvaible2 == true)
         {
             if (weaponSelected != 2)
             {
@@ -51,7 +51,7 @@ public class WeaponSwitch : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.F3))
         {
             if (weaponSelected != 3)
             {

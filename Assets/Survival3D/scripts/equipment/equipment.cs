@@ -64,6 +64,13 @@ public class equipment : MonoBehaviour
             didViewInventory = false;
         }
 
+        if (Input.GetKeyUp(KeyCode.Alpha1)) { useObjectToolbar(listItemToolbar[0].id, 0, !listItemToolbar[0].isWeapon, listItemToolbar[0].isWeapon);}
+        if (Input.GetKeyUp(KeyCode.Alpha2)) { useObjectToolbar(listItemToolbar[1].id, 1, !listItemToolbar[1].isWeapon, listItemToolbar[1].isWeapon); }
+        if (Input.GetKeyUp(KeyCode.Alpha3)) { useObjectToolbar(listItemToolbar[2].id, 2, !listItemToolbar[2].isWeapon, listItemToolbar[2].isWeapon); }
+        if (Input.GetKeyUp(KeyCode.Alpha4)) { useObjectToolbar(listItemToolbar[3].id, 3, !listItemToolbar[3].isWeapon, listItemToolbar[3].isWeapon); }
+        if (Input.GetKeyUp(KeyCode.Alpha5)) { useObjectToolbar(listItemToolbar[4].id, 4, !listItemToolbar[4].isWeapon, listItemToolbar[4].isWeapon); }
+
+
 
     }
 
@@ -228,14 +235,14 @@ public class equipment : MonoBehaviour
                 WeaponSwitch.isAvaible2 = true;
                 WeaponSwitch.weaponSelected = 2;
                 WeaponSwitch.didChange = true;
-                listOwnedItem[slotNumber] = new Object();
+                //listOwnedItem[slotNumber] = new Object();
             }
             if (id == 6)
             {
                 WeaponSwitch.isAvaible1 = true;
                 WeaponSwitch.weaponSelected = 1;
                 WeaponSwitch.didChange = true;
-                listOwnedItem[slotNumber] = new Object();
+                //listOwnedItem[slotNumber] = new Object();
             }
             /*
             GameObject objekt = Instantiate(listOwnedItem[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
@@ -256,7 +263,7 @@ public class equipment : MonoBehaviour
             
         }
 
-        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity == 1 && timeUseObject + 1 < DayNightCycle.actualTime)
+        if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity == 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
             listOwnedItem[slotNumber] = new Object();
             if (id == 3)
@@ -272,7 +279,7 @@ public class equipment : MonoBehaviour
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
         }
-        else if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1 && timeUseObject + 1 < DayNightCycle.actualTime)
+        else if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
             timeUseObject = DayNightCycle.actualTime;
             listOwnedItem[slotNumber].stackedQuantity -= 1;
@@ -295,25 +302,23 @@ public class equipment : MonoBehaviour
     {
         if (isWeapon == true && didObjectDragg == false)
         {
-            GameObject objekt = Instantiate(listItemToolbar[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
-            objekt.name = listItemToolbar[slotNumber].name;
-            objekt.transform.parent = FPSCon.transform;
-            draggedObject = objekt;
-            didObjectDragg = true;
+            if (id == 1)
+            {
+                WeaponSwitch.isAvaible2 = true;
+                WeaponSwitch.weaponSelected = 2;
+                WeaponSwitch.didChange = true;
+                //listOwnedItem[slotNumber] = new Object();
+            }
+            if (id == 6)
+            {
+                WeaponSwitch.isAvaible1 = true;
+                WeaponSwitch.weaponSelected = 1;
+                WeaponSwitch.didChange = true;
+                //listOwnedItem[slotNumber] = new Object();
+            }
         }
-
-        if (isWeapon == true && didObjectDragg == true)
-        {
-            Destroy(draggedObject.gameObject);
-            GameObject objekt = Instantiate(listItemToolbar[slotNumber].prefabObject, handPosition.position, handPosition.rotation);
-            objekt.name = listItemToolbar[slotNumber].name;
-            objekt.transform.parent = FPSCon.transform;
-            draggedObject = objekt;
-
-        }
-
-        if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity == 1 && timeUseObject + 1 < DayNightCycle.actualTime)
-        {
+            if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity == 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
+             {
             listItemToolbar[slotNumber] = new Object();
             if (id == 3)
             {
@@ -323,8 +328,12 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
+            if (id == 5)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
         }
-        else if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity > 1 && timeUseObject + 1 < DayNightCycle.actualTime)
+        else if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
             timeUseObject = DayNightCycle.actualTime;
             listItemToolbar[slotNumber].stackedQuantity -= 1;
@@ -333,6 +342,10 @@ public class equipment : MonoBehaviour
                 if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
             }
             if (id == 4)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+            if (id == 5)
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
