@@ -123,9 +123,13 @@ public class Crafting : MonoBehaviour
         {
             info = "Needed items:" + "\n" + "trunk" + "\n" + "bottle";
         }
+        if(id == 25) // rescue boat
+        {
+            info = "Needed items:" + "\n" + "3x trunks" + "\n" + "2x ropes";
+        }
 
     }
-    // dla kazdego przedmiotu z database z craftingu musimy tutaj wpisac info id musi sie zgadzac
+    
     void CreateItem(int id)
     {
         if(id == 1)
