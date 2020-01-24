@@ -47,7 +47,7 @@ public class enemyAI : MonoBehaviour
         //Pobranie dystansu dzielącaego wroga od gracza
         float distance = Vector3.Distance(enemy.position, player.position);
         //jeżeli wróg jest za blisko to nam odejmuje życie
-        if (distance < rangeDamage && timeDamage + 3 < DayNightCycle.actualTime)
+        if (distance < rangeDamage && timeDamage + 1 < DayNightCycle.actualTime)
         {
             HUD.actualHP -= 15;
             timeDamage = DayNightCycle.actualTime;
