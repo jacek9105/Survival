@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 494}
   m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 1588
+  controlID: 306
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 1589
+  controlID: 307
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 1590
+  controlID: 308
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -433,9 +433,9 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 112}
-      m_SelectedIDs: 242b0000
-      m_LastClickedID: 0
+      scrollPos: {x: 0, y: 195}
+      m_SelectedIDs: 9a490000
+      m_LastClickedID: 18842
       m_ExpandedIDs: 5afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -496,9 +496,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1545.6218, y: 118.95991, z: 596.46246}
+    m_Target: {x: 1734.9565, y: 12.444628, z: 475.6348}
     speed: 2
-    m_Value: {x: 1545.6218, y: 118.95991, z: 596.46246}
+    m_Value: {x: 1734.9565, y: 12.444628, z: 475.6348}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -529,11 +529,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.18386704, y: 0.04453748, z: -0.008360965, w: -0.9819217}
     speed: 2
-    m_Value: {x: -0.19996607, y: 0.051732004, z: -0.010594605, w: -0.9783789}
+    m_Value: {x: -0.18386704, y: 0.04453748, z: -0.008360965, w: -0.9819217}
   m_Size:
-    m_Target: 9.850643
+    m_Target: 172.54834
     speed: 2
-    m_Value: 10.31481
+    m_Value: 172.54834
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -688,19 +688,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Survival3D/scripts/equipment
+    - Assets/EffectExamples
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Survival3D/scripts/equipment
+  - Assets/EffectExamples
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\GIT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 333}
-    m_SelectedIDs: 2a3a0000
-    m_LastClickedID: 14890
+    scrollPos: {x: 0, y: 127}
+    m_SelectedIDs: f4310000
+    m_LastClickedID: 12788
     m_ExpandedIDs: 00000000d4300000a2310000383200003a32000058320000cc320000da33000030340000503700005e380000e6380000aa3a0000b03a0000003b00003c3c0000a83c0000303d00008c3d00001a3e0000723e00002c3f0000a63f00001040000084400000b8400000da41000034440000484500009a450000885200008a52000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000a86200000a540000be53000058340000a64c0000985500003c550000a64100000ab60000e640000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
