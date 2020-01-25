@@ -305,6 +305,14 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
+            }
         }
         else if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
@@ -321,6 +329,14 @@ public class equipment : MonoBehaviour
             if (id == 5)
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
             }
         }
     }
@@ -359,6 +375,14 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
+            }
         }
         else if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
@@ -375,6 +399,14 @@ public class equipment : MonoBehaviour
             if (id == 5)
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
             }
         }
     }
