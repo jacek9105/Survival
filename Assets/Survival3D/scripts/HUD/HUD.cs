@@ -47,13 +47,20 @@ public class HUD : MonoBehaviour
         actualHunger = Mathf.Clamp(actualHunger, 0, 100);
         actualStamina = Mathf.Clamp(actualStamina, 0, 100);
 
-        hpBar.transform.localScale = new Vector3(actualHP / maxHP, 1, 0);
-        desireBar.transform.localScale = new Vector3(actualDesire / maxDesire, 1, 0);
-        hungerBar.transform.localScale = new Vector3(actualHunger / maxHunger, 1, 0);
-        staminaBar.transform.localScale = new Vector3(actualStamina / maxStamina, 1, 0);
+        hpBar.transform.localScale = new Vector3(Screen.width*0.07f*actualHP/maxHP, Screen.height*0.10f, 0);
+        hpBar.transform.position = new Vector3(Screen.width * 0.07f, Screen.height * 0.05f, 1);
 
-        actualDesire -= 0.5f * Time.deltaTime;
-        actualHunger -= 0.25f * Time.deltaTime;
+        hungerBar.transform.localScale = new Vector3(Screen.width * 0.07f * actualHunger / maxHunger, Screen.height * 0.10f, 0);
+        hungerBar.transform.position = new Vector3(Screen.width * 0.13f, Screen.height * 0.05f, 1);
+
+        desireBar.transform.localScale = new Vector3(Screen.width * 0.07f * actualDesire / maxDesire, Screen.height * 0.10f, 0);
+        desireBar.transform.position = new Vector3(Screen.width * 0.19f, Screen.height * 0.05f, 1);
+
+        staminaBar.transform.localScale = new Vector3(Screen.width * 0.07f * actualStamina / maxStamina, Screen.height * 0.10f, 0);
+        staminaBar.transform.position = new Vector3(Screen.width * 0.25f, Screen.height * 0.05f, 1);
+
+        actualDesire -= 0.2f * Time.deltaTime;
+        actualHunger -= 0.1f * Time.deltaTime;
 
       
 

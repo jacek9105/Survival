@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -70,10 +71,36 @@ public class equipment : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Alpha4)) { useObjectToolbar(listItemToolbar[3].id, 3, !listItemToolbar[3].isWeapon, listItemToolbar[3].isWeapon); }
         if (Input.GetKeyUp(KeyCode.Alpha5)) { useObjectToolbar(listItemToolbar[4].id, 4, !listItemToolbar[4].isWeapon, listItemToolbar[4].isWeapon); }
 
+        if (Input.GetKeyUp(KeyCode.G))
+        {
+            discardItem();
+        }
 
 
     }
 
+    private void discardItem()
+    {
+        int i = 0;
+        draggedObject.transform.parent = null;
+        draggedObject.GetComponent<Rigidbody>().useGravity = true;
+        draggedObject.GetComponent<Rigidbody>().isKinematic = false;
+        didObjectDragg = false;
+        for(int x = 1; x < listOwnedItem.Count; x++)
+        {
+            if (listOwnedItem[i].id == draggedObject.GetComponent<itemToLift>().id)
+            {
+                if (listOwnedItem[i].stackedQuantity > 1)
+                {
+                    listOwnedItem[i].stackedQuantity -= 1;
+                }
+                if (listOwnedItem[i].stackedQuantity == 1)
+                {
+                    listOwnedItem[i] = new Object();
+                }
+            }
+        }
+    }
 
     void OnGUI()
     {
@@ -278,6 +305,14 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
+            }
         }
         else if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
@@ -294,6 +329,14 @@ public class equipment : MonoBehaviour
             if (id == 5)
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
             }
         }
     }
@@ -332,6 +375,14 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
             }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
+            }
         }
         else if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
@@ -348,6 +399,14 @@ public class equipment : MonoBehaviour
             if (id == 5)
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            }
+            if (id == 8)
+            {
+                if (HUD.actualHP <= 75) { HUD.actualHP += 25; } else { HUD.actualHP = 100; }
+            }
+            if (id == 9)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
             }
         }
     }
