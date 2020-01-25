@@ -7326,8 +7326,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.91983, y: -79.25}
-  m_SizeDelta: {x: 496.9, y: 158.5}
+  m_AnchoredPosition: {x: 97.91983, y: -12.16}
+  m_SizeDelta: {x: 496.9, y: 292.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &440128699
 MonoBehaviour:
@@ -7342,7 +7342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7361,8 +7361,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Instrukcja: W,S,A,D - poruszanie si\u0119\nE - podnoszenie przedmiot\xF3w\nI
-    - podgl\u0105d ekwipunku\n1,2,3.. - zmiana broni\nP - crafting\nLMB, PMB, MMB
-    - walka"
+    - podgl\u0105d ekwipunku\n1,2,..,5 - pasek narz\u0119dzi\nF1, F2, F3 - zmiana
+    broni\nP - crafting\nSHIFT - sprint / dzielenie stack\xF3w\nLMB, PMB, MMB - walka"
 --- !u!222 &440128700
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12854,7 +12854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -12872,7 +12872,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Wskaz\xF3wka nr 2! Aktualnie brak fabu\u0142y!"
+  m_Text: "Brawo, obra\u0142e\u015B prawid\u0142owy kierunek! Trzymaj si\u0119 g\u0142\xF3wnej
+    drogi. Po drodze znajdziesz grzyby, uwa\u017Caj na muchomory."
 --- !u!222 &779813384
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33604,7 +33605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -33622,9 +33623,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nBudzisz si\u0119 na wyspie.. Nic nie pami\u0119tasz.. Uwa\u017Caj na
-    pobliskie zwierz\u0119ta. Poszukaj skalnego przej\u015Bcia przy g\u0142\xF3wnej
-    drodze!"
+  m_Text: "\nBudzisz si\u0119 na wyspie.. Nic nie pami\u0119tasz.. Znajd\u017A bro\u0144.
+    Uwa\u017Caj na pobliskie zwierz\u0119ta. Poszukaj skalnego przej\u015Bcia przy
+    g\u0142\xF3wnej drodze! Kieruj si\u0119 na zach\xF3d!"
 --- !u!222 &2053322901
 CanvasRenderer:
   m_ObjectHideFlags: 0
