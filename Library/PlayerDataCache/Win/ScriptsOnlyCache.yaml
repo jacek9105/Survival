@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - DisplayText
     - HUD
     - MenuUI
+    - PigAxe
     - Tree_Felling
     - WeaponSwitch
     - enemyAI
@@ -30,12 +31,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -113,39 +108,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10494}
     - Class: 114
-      Script: {instanceID: 10980}
+      Script: {instanceID: 10830}
     - Class: 114
-      Script: {instanceID: 11004}
+      Script: {instanceID: 10982}
     - Class: 114
-      Script: {instanceID: 11028}
+      Script: {instanceID: 11006}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 11030}
     - Class: 114
-      Script: {instanceID: 11112}
+      Script: {instanceID: 11044}
     - Class: 114
-      Script: {instanceID: 11182}
+      Script: {instanceID: 11114}
     - Class: 114
-      Script: {instanceID: 11276}
+      Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11278}
     - Class: 114
-      Script: {instanceID: 11414}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11456}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 11560}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11682}
     - Class: 114
-      Script: {instanceID: 11980}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11982}
     - Class: 114
-      Script: {instanceID: 12050}
+      Script: {instanceID: 11996}
+    - Class: 114
+      Script: {instanceID: 12052}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -735,6 +732,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Water
     className: Displace
+  - hash:
+      serializedVersion: 2
+      Hash: ace29c6f2be301c14757ae49b933dc9c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PigAxe
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
