@@ -19,7 +19,7 @@ public class DayNightCycle : MonoBehaviour
     void Update()
     {
         actualTime += Time.deltaTime;
-        sun.Rotate(5 * Time.deltaTime, 0, 0);
+        sun.Rotate(0.3f * Time.deltaTime, 0, 0);
         if (actualTime > 0 && actualTime < 7.5f)
         {
             sunLight.intensity += 1 * Time.deltaTime / 7.5f;

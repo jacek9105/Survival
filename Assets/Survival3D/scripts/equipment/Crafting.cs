@@ -84,7 +84,7 @@ public class Crafting : MonoBehaviour
     {
         
         int i = 0;
-        
+        GUI.Box(new Rect(Screen.width * 0.10f, Screen.height * 0.05f, Screen.width * 0.28f, Screen.height * 0.01f), "CRAFTING", skin.GetStyle("inventoryText"));
         for (int x = 0; x < numberSocketsX; x++)
         {
             for (int y = 0; y < numberSocketsY; y++)
@@ -131,6 +131,10 @@ public class Crafting : MonoBehaviour
         if(id == 10) // rescue boat
         {
             info = "Needed items:" + "\n" + "3x trunks" + "\n" + "2x ropes";
+        }
+        if (id == 8) // apteczka
+        {
+            info = "Needed items:" + "\n" + "2x meal";
         }
 
     }
