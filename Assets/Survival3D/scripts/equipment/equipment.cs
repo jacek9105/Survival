@@ -10,6 +10,7 @@ public class equipment : MonoBehaviour
 
     public Object objectDragg;
     static public bool didViewInventory;
+   
 
     //public WeaponSwitch weaponSwitch;
 
@@ -40,8 +41,7 @@ public class equipment : MonoBehaviour
         numberSocketsX = 5;
         numberSocketsY = 4;
         timeUseObject = 0;
-
-
+        
     }
 
     // Update is called once per frame

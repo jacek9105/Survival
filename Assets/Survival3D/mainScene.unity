@@ -11580,6 +11580,7 @@ MonoBehaviour:
   equipment: {fileID: 298123857}
   skin: {fileID: 11400000, guid: 16c32de33657f7e42a1f2e51bd969013, type: 2}
   info: 
+  rescueBoat: 0
 --- !u!1001 &692519948
 PrefabInstance:
   m_ObjectHideFlags: 0
