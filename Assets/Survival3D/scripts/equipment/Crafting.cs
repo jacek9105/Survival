@@ -7,6 +7,7 @@ public class Crafting : MonoBehaviour
     public Database Database;
     public equipment equipment;
     public GUISkin skin;
+    public GameObject raftsail;
     int numberSocketsX;
     int numberSocketsY;
     static public bool didViewCrafting;
@@ -34,7 +35,7 @@ public class Crafting : MonoBehaviour
         info = null;
         time = 1;
         rescueBoat = false;
-        
+        raftsail.SetActive(false);
     }
 
 
@@ -298,7 +299,7 @@ public class Crafting : MonoBehaviour
             {
                 addItem(10);
                 rescueBoat = true;
-                
+                raftsail.SetActive(true);
                 for (int i = 0; i < 3; i++)  // musimy wykonac nastepny for tyle razy ile potrzebujemy przedmiotow!! i musi być mniejsze od ilosci itemow ktore potrzebujemy
                 {
                     for (int x = 0; x < equipment.listOwnedItem.Count; x++)
