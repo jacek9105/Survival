@@ -12,7 +12,22 @@ ModelImporter:
   - first:
       74: -5187248419258813496
     second: Plane|PlaneAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bark
+    second: {fileID: 2100000, guid: 35c9edf932872e64599e32363bc4d4e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leaf
+    second: {fileID: 2100000, guid: d576d28e38c3f424fbe4654ba84b14ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sail
+    second: {fileID: 2100000, guid: ad1c4f122626dbe4ab8b1ddfd34903f7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -45,7 +60,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

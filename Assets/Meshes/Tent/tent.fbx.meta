@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: 4166445860707080784
     second: tent|PlaneAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bark material
+    second: {fileID: 2100000, guid: 6f6f9fd4cd9026e4f80460f63c699e9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frame
+    second: {fileID: 2100000, guid: 6ee247d302b0b264d93d4de4daa00c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tent_cloth
+    second: {fileID: 2100000, guid: 2fa45c5450746864cb282fb42c731b83, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -39,7 +54,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
