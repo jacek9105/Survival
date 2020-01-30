@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemyAI : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class enemyAI : MonoBehaviour
 
     //Obiekt wroga
     private Transform enemy;
-
     //Prędkość odwracania się przeciwnika
     public float rotationspeed = 4.0f;
     //Prędkość ruchu przeciwnika
@@ -23,10 +23,10 @@ public class enemyAI : MonoBehaviour
     public float distanceFromPlayer = 2f;
     //aktualna wysokość skoku
     public float strokeHeight = 0f;
-
     public bool ghost;
-
     public float timeDamage;
+
+
 
 
     
@@ -39,6 +39,7 @@ public class enemyAI : MonoBehaviour
         GameObject go = GameObject.FindWithTag("Player");
         player = go.transform;
         timeDamage = 0;
+
     }
 
     // Update is called once per frame
@@ -51,7 +52,11 @@ public class enemyAI : MonoBehaviour
         {
             HUD.actualHP -= 15;
             timeDamage = DayNightCycle.actualTime;
+            HUD.isTakingDamage = true;
         }
+
+
+
         //Jeżeli wróg jest w odpowiedniej odległości to zaczyna się poruszać w stgronę gracza
 
         if (distance < range && distance > distanceFromPlayer)
@@ -82,10 +87,6 @@ public class enemyAI : MonoBehaviour
                 //tryb ducha
                 enemy.position += enemy.forward * movespeed * Time.deltaTime;
             }
-
-        
-            
-            
 
         }
 

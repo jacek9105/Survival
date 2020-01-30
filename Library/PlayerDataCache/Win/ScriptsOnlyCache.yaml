@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-firstpass.dll:
-    - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
     - AQUAS_Lite.AQUAS_Lite_Reflection
     - AnimationController
@@ -14,6 +12,7 @@ ScriptsOnlyBuild:
     - MenuUI
     - PigAxe
     - Tree_Felling
+    - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     - WeaponSwitch
     - enemyAI
     - equipment
@@ -22,15 +21,30 @@ ScriptsOnlyBuild:
     - pigHP
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.Experimental.TerrainAPI.BillowNoise
+    - UnityEditor.Experimental.TerrainAPI.BridgeTool
+    - UnityEditor.Experimental.TerrainAPI.CloneBrushTool
+    - UnityEditor.Experimental.TerrainAPI.ContrastTool
     - UnityEditor.Experimental.TerrainAPI.FbmFractalType
+    - UnityEditor.Experimental.TerrainAPI.MeshStampTool
     - UnityEditor.Experimental.TerrainAPI.NoiseBlitShaderGenerator
     - UnityEditor.Experimental.TerrainAPI.NoiseFillShaderGenerator
+    - UnityEditor.Experimental.TerrainAPI.NoiseHeightTool
     - UnityEditor.Experimental.TerrainAPI.NoneFractalType
+    - UnityEditor.Experimental.TerrainAPI.PaintHeightTool
+    - UnityEditor.Experimental.TerrainAPI.PaintTextureTool
     - UnityEditor.Experimental.TerrainAPI.PerlinNoise
     - UnityEditor.Experimental.TerrainAPI.RidgeNoise
+    - UnityEditor.Experimental.TerrainAPI.SetHeightTool
+    - UnityEditor.Experimental.TerrainAPI.SharpenPeaksTool
+    - UnityEditor.Experimental.TerrainAPI.SlopeFlattenTool
+    - UnityEditor.Experimental.TerrainAPI.SmoothHeightTool
+    - UnityEditor.Experimental.TerrainAPI.StampTool
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
+    - UnityEditor.Experimental.TerrainAPI.TerraceErosion
+    - UnityEditor.Experimental.TerrainAPI.ThermalErosionTool
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
+    - UnityEditor.Experimental.TerrainAPI.WindErosionTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -143,6 +157,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11996}
     - Class: 114
       Script: {instanceID: 12052}
+    - Class: 114
+      Script: {instanceID: 28076}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -261,7 +277,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: b228ed908416c48f33618f06c2bea6fb
-    assemblyName: Assembly-CSharp-firstpass.dll
+    assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Characters.FirstPerson
     className: FirstPersonController
   - hash:
@@ -687,7 +703,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 0e0c7e6c34f2d19ba95cf463e39888b1
-    assemblyName: Assembly-CSharp-firstpass.dll
+    assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Characters.FirstPerson
     className: HeadBob
   - hash:
@@ -962,8 +978,8 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 76b945b547f74d79302f337813e6c0be
-    assemblyName: Assembly-CSharp-firstpass.dll
+      Hash: 649fcdf7fa1d3e87ba90f9413668c787
+    assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Characters.FirstPerson
     className: RigidbodyFirstPersonController
   - hash:
@@ -998,7 +1014,7 @@ ScriptsOnlyBuild:
     className: AlphaButtonClickMask
   - hash:
       serializedVersion: 2
-      Hash: fcc34d616ce21d85e367da6a89c5b751
+      Hash: cbe001b1de8c616e5bfbbb55280c53e2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HUD
@@ -1160,7 +1176,7 @@ ScriptsOnlyBuild:
     className: TimedObjectDestructor
   - hash:
       serializedVersion: 2
-      Hash: c5b50ff4e558dbe0363e34e2748f2823
+      Hash: 11d00ec63c8585c53ce99835d39a5418
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Crafting

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController Fpsc;
     bool decreaseStamina;
+    public GameObject damage;
 
     static public float maxHP;
     static public float actualHP;
@@ -24,8 +26,16 @@ public class HUD : MonoBehaviour
     public GameObject desireBar;
     public GameObject hungerBar;
     public GameObject staminaBar;
+
+    [Header("DamageScreen")]
+    public Color damageColor;
+    public Image damageImage;
+    float colorSmothing = 6f;
+    public static bool isTakingDamage = false;
+
     void Start()
     {
+
         decreaseStamina = false;
 
         maxHP = 100;
@@ -62,6 +72,14 @@ public class HUD : MonoBehaviour
         actualDesire -= 0.2f * Time.deltaTime;
         actualHunger -= 0.1f * Time.deltaTime;
 
+        if(isTakingDamage)
+        {
+            damageImage.color = damageColor;
+        }
+        else
+        {
+            damageImage.color = Color.Lerp(damageImage.color,Color.clear, colorSmothing * Time.deltaTime);
+        }
       
 
         if (actualDesire < 5 || actualHunger < 5)
@@ -110,5 +128,7 @@ public class HUD : MonoBehaviour
             Destroy(gameObject);
             // Matt dodaj okienko które pozwloić kliknąć koniec gry czy coś takiego i wróci do ekranu pierwszego.
         }
+
+        isTakingDamage = false;
     }
 }
