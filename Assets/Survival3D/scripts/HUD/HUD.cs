@@ -99,7 +99,7 @@ public class HUD : MonoBehaviour
 
         if (Fpsc.m_IsWalking == false)
         {
-            actualStamina -= 1 * Time.deltaTime;
+            actualStamina -= 5 * Time.deltaTime;
         }
             else if (actualStamina < maxStamina)
             {

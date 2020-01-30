@@ -7658,7 +7658,7 @@ Transform:
   m_Children:
   - {fileID: 31896691}
   m_Father: {fileID: 298123864}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &348949212
 AudioListener:
@@ -10676,7 +10676,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -10700,7 +10700,7 @@ RectTransform:
   - {fileID: 1004269337}
   - {fileID: 2134542777}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18771,7 +18771,7 @@ Transform:
   m_LocalScale: {x: 0.5000001, y: 0.8, z: 0.5000001}
   m_Children: []
   m_Father: {fileID: 298123864}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &858365476
 CapsuleCollider:
@@ -25409,7 +25409,7 @@ RectTransform:
   - {fileID: 204198083}
   - {fileID: 1969506303}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

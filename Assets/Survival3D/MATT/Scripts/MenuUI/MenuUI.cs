@@ -29,7 +29,11 @@ public class MenuUI : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp (KeyCode.Escape)) { //Jeżeli naciśnięto klawisz "Escape"
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            quitMenu.enabled = false;
+        }
+        if (Input.GetKeyUp (KeyCode.Escape)) { //Jeżeli naciśnięto klawisz "Escape"
 			manuUI.enabled = !manuUI.enabled;//Ukrycie/pokazanie menu.
                   
 
@@ -51,7 +55,9 @@ public class MenuUI : MonoBehaviour {
 		}
 
 
-        if(Input.GetKeyUp(KeyCode.I))
+
+
+        if (Input.GetKeyUp(KeyCode.I))
         {
             manuUI.enabled = false;
         }
