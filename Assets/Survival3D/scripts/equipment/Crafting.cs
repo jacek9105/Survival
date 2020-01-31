@@ -226,7 +226,7 @@ public class Crafting : MonoBehaviour
         // -----------------=================CRAFTING Z WYKORZYSTANIEM WIECEJ PRZEDMIOTOW JEDNEGO RODZAJU!!!!===============-------------
         if (id == 3)
         {
-            CheckItem(2,0,0,3); // podajemy ile przedmiotow ktorego rodzaju potrzebujemy!! wywolujemy funkcje checkitem!!
+            CheckItem(2,0,0,0,3); // podajemy ile przedmiotow ktorego rodzaju potrzebujemy!! wywolujemy funkcje checkitem!!
             if (canCraft == true) //&& craftedItem == false
             {
                 addItem(3);
