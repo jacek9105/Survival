@@ -130,7 +130,7 @@ public class Crafting : MonoBehaviour
         }
         if(id == 10) // rescue boat
         {
-            info = "Needed items:" + "\n" + "3x trunks" + "\n" + "2x ropes";
+            info = "Needed items:" + "\n" + "3x trunks" + "\n" + "2x ropes" + "\n" + "1x sail";
         }
         if (id == 8) // apteczka
         {
@@ -298,7 +298,7 @@ public class Crafting : MonoBehaviour
         //     ------------------------===============RESCUE BOAT CRAFTING===============------------------
         if (id == 10)
         {
-            CheckItem(2, 7, 0, 0, 3, 2, 0,0); // podajemy ile przedmiotow ktorego rodzaju potrzebujemy!! wywolujemy funkcje checkitem!!
+            CheckItem(2, 7, 11, 0, 3, 2, 1,0); // podajemy ile przedmiotow ktorego rodzaju potrzebujemy!! wywolujemy funkcje checkitem!!
             if (canCraft == true) //&& craftedItem == false
             {
                 addItem(10);
@@ -351,6 +351,28 @@ public class Crafting : MonoBehaviour
 
                                 break;
                             }
+                        }
+                    }
+                }
+                for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                {
+                    if (equipment.listOwnedItem[x].id == 11)
+                    {
+                        if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                        {
+                            equipment.listOwnedItem[x].stackedQuantity -= 1;
+                            canCraft = false;
+                            //craftedItem = true;
+                            break;
+                        }
+                        else
+                        if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                        {
+                            equipment.listOwnedItem[x] = new Object();
+                            canCraft = false;
+                            //craftedItem = true;
+
+                            break;
                         }
                     }
                 }

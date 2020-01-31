@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1788179778188070081}
   - component: {fileID: 7317191298146957047}
   - component: {fileID: 3942738595238578702}
-  - component: {fileID: 9035175879053127877}
+  - component: {fileID: 6740590967669467613}
   m_Layer: 0
   m_Name: sail_ground
-  m_TagString: Untagged
+  m_TagString: itemToPick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,17 +79,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &9035175879053127877
-MeshCollider:
+--- !u!114 &6740590967669467613
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3353983050017488594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -7387706064836869012, guid: 329cd3a93f70b9c43a168b6e27efc8ab, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464e59bb2f0eedd4c995c3556edf6cdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
