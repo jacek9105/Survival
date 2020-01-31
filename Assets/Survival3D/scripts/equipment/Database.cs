@@ -20,7 +20,8 @@ public class Database : MonoBehaviour
         itemList.Add(new Object(8, "fak", "First aid kit - +25 HP", false, 1));
         itemList.Add(new Object(9, "can", "Can of food - +30 Hungry", false, 1));
         itemList.Add(new Object(10, "rescueboat", "Needed to escape from island", false, 1));
-        itemList.Add(new Object(11, "sail", "Needed to built rescue boat", false, 1));  
+        itemList.Add(new Object(11, "sail", "Needed to built rescue boat", false, 1));
+        itemList.Add(new Object(12, "waterbottle", "Bottle of water", false, 1));
 
 
         // nulle albo cos dodajemy albo wyrzucamy musi byc tyle samo pozycji ile jest miejsca w numbersocket w skrypcie crafting

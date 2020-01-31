@@ -91,11 +91,6 @@ public class HUD : MonoBehaviour
             actualHP += 1 * Time.deltaTime;
         }
 
-        if (actualStamina < 0.75)
-        {
-            Fpsc.m_Jumping = false;
-            Fpsc.m_IsWalking = true;
-        }
 
         if (Fpsc.m_IsWalking == false)
         {
@@ -103,7 +98,7 @@ public class HUD : MonoBehaviour
         }
             else if (actualStamina < maxStamina)
             {
-            actualStamina += 1 * Time.deltaTime;
+            actualStamina += 2 * Time.deltaTime;
             }
 
         if (Fpsc.m_Jumping == true && decreaseStamina == false)
