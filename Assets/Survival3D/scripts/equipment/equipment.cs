@@ -342,6 +342,10 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
             }
+            if (id == 12)
+            {
+                if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
+            }
         }
     }
 
