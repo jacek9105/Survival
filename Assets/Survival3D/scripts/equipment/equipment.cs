@@ -391,6 +391,10 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
             }
+            if (id == 12)
+            {
+                if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
+            }
         }
         else if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AQUAS_Lite.AQUAS_Lite_Camera
     - AQUAS_Lite.AQUAS_Lite_Reflection
     - AnimationController
     - Axe
@@ -45,6 +46,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
     - UnityEditor.Experimental.TerrainAPI.WindErosionTool
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -118,6 +125,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10054}
     - Class: 114
+      Script: {instanceID: 10248}
+    - Class: 114
       Script: {instanceID: 10290}
     - Class: 114
       Script: {instanceID: 10494}
@@ -158,7 +167,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12052}
     - Class: 114
-      Script: {instanceID: 28076}
+      Script: {instanceID: 28402}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
