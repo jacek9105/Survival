@@ -55,10 +55,7 @@ public class Crafting : MonoBehaviour
 
 
         }
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            didViewCrafting = false;
-        }
+
         if(craftedItem == true)
         {
             time -= 1 * Time.deltaTime;

@@ -33,7 +33,9 @@ public class MenuUI : MonoBehaviour {
         {
             quitMenu.enabled = false;
         }
-        if (Input.GetKeyUp (KeyCode.Escape)) { //Jeżeli naciśnięto klawisz "Escape"
+
+
+        if (Input.GetKeyUp (KeyCode.Escape) && equipment.didViewInventory == false && Crafting.didViewCrafting == false) { //Jeżeli naciśnięto klawisz "Escape"
 			manuUI.enabled = !manuUI.enabled;//Ukrycie/pokazanie menu.
                   
 
@@ -53,6 +55,11 @@ public class MenuUI : MonoBehaviour {
 				quitMenu.enabled = false; //Ukrycie menu pytania.
 			}	
 		}
+        else if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            equipment.didViewInventory = false;
+            Crafting.didViewCrafting = false;
+        }
 
 
 

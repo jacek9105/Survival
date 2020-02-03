@@ -60,10 +60,6 @@ public class equipment : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            didViewInventory = false;
-        }
 
         if (Input.GetKeyUp(KeyCode.Alpha1)) { useObjectToolbar(listItemToolbar[0].id, 0, !listItemToolbar[0].isWeapon, listItemToolbar[0].isWeapon);}
         if (Input.GetKeyUp(KeyCode.Alpha2)) { useObjectToolbar(listItemToolbar[1].id, 1, !listItemToolbar[1].isWeapon, listItemToolbar[1].isWeapon); }
@@ -419,6 +415,10 @@ public class equipment : MonoBehaviour
             if (id == 9)
             {
                 if (HUD.actualHunger <= 75) { HUD.actualHunger += 30; } else { HUD.actualHunger = 100; }
+            }
+            if (id == 12)
+            {
+                if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
             }
         }
     }

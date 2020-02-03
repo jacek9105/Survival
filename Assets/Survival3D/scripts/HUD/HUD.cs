@@ -84,7 +84,8 @@ public class HUD : MonoBehaviour
 
         if (actualDesire < 5 || actualHunger < 5)
         {
-            actualHP -= 0.1f * Time.deltaTime;
+            actualHP -= 3f * Time.deltaTime;
+
         }
         else if(actualHP < maxHP)
         {
