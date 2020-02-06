@@ -6214,18 +6214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1745636570}
---- !u!114 &298123868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298123856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &298123869
 Camera:
   m_ObjectHideFlags: 0
@@ -7719,7 +7707,6 @@ GameObject:
   - component: {fileID: 348949211}
   - component: {fileID: 348949213}
   - component: {fileID: 348949212}
-  - component: {fileID: 348949214}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7756,7 +7743,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348949210}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -7792,18 +7779,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &348949214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348949210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &349116918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 532066205bc320d4aa4647332e9d2ffa,
@@ -14982,30 +14957,6 @@ MonoBehaviour:
   raftsail: {fileID: 2003686674}
   info: 
   rescueBoat: 0
---- !u!114 &688992511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688992505}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &688992512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688992505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c79ca230b752ed4689dbf9e2583b1b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &692519948
 PrefabInstance:
   m_ObjectHideFlags: 0
