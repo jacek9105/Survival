@@ -37,9 +37,9 @@ public class WeaponSwitch : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F1) && isAvaible1 == true)
         {
-            if(weaponSelected != 1)
+            if (weaponSelected != 1)
             {
-                SwapWeapon(1);              
+                SwapWeapon(1);
             }
         }
 
@@ -66,11 +66,12 @@ public class WeaponSwitch : MonoBehaviour
 
     public void SwapWeapon(int weaponType)
     {
-        if(weaponType == 1)
+        if (weaponType == 1)
         {
             primary.SetActive(true);
             secondary.SetActive(false);
             melee.SetActive(false);
+         
 
             weaponSelected = 1;
         }
@@ -80,6 +81,7 @@ public class WeaponSwitch : MonoBehaviour
             primary.SetActive(false);
             secondary.SetActive(true);
             melee.SetActive(false);
+       
 
             weaponSelected = 2;
         }
@@ -89,8 +91,11 @@ public class WeaponSwitch : MonoBehaviour
             primary.SetActive(false);
             secondary.SetActive(false);
             melee.SetActive(true);
+      
 
             weaponSelected = 3;
+
+          
         }
     }
 }
