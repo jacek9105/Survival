@@ -46,6 +46,9 @@ public class Crafting : MonoBehaviour
         {
             didViewCrafting = !didViewCrafting;
             Cursor.visible = didViewCrafting;//Ukrycie pokazanie kursora myszy.
+            equipment.firstDesrciption = false;
+            equipment.firstDesrciption2 = false;
+
             if (didViewCrafting == true)
             {
                 Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.

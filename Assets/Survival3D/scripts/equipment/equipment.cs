@@ -16,6 +16,8 @@ public class equipment : MonoBehaviour
 
     bool didObjectDragg;
     bool doShare;
+    static public bool firstDesrciption2;
+    static public bool firstDesrciption;
 
 
     int numberSocketsX;
@@ -41,7 +43,10 @@ public class equipment : MonoBehaviour
         numberSocketsX = 5;
         numberSocketsY = 4;
         timeUseObject = 0;
-        
+        firstDesrciption = false;
+        firstDesrciption2 = true;
+
+
     }
 
     // Update is called once per frame
@@ -53,6 +58,8 @@ public class equipment : MonoBehaviour
         {
             didViewInventory = !didViewInventory;
             Cursor.visible = didViewInventory;//Ukrycie pokazanie kursora myszy.
+            firstDesrciption = false;
+            
             if (didViewInventory == true)
             {
                 Crafting.didViewCrafting = false;
@@ -67,9 +74,23 @@ public class equipment : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Alpha4)) { useObjectToolbar(listItemToolbar[3].id, 3, !listItemToolbar[3].isWeapon, listItemToolbar[3].isWeapon); }
         if (Input.GetKeyUp(KeyCode.Alpha5)) { useObjectToolbar(listItemToolbar[4].id, 4, !listItemToolbar[4].isWeapon, listItemToolbar[4].isWeapon); }
 
+
+
         if (Input.GetKeyUp(KeyCode.G))
         {
             discardItem();
+        }
+
+        if (Input.GetKeyUp(KeyCode.E) && firstDesrciption == false)
+        {
+            for (int i = 0; i < listOwnedItem.Count; i++)
+            {
+                if (listOwnedItem[i].id != 0)
+                {
+                    firstDesrciption = true;
+                }
+            }
+
         }
 
 
@@ -100,6 +121,13 @@ public class equipment : MonoBehaviour
 
     void OnGUI()
     {
+        if(firstDesrciption == true && firstDesrciption2 == true)
+        {
+            GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("firstDescription"));
+
+        }
+     
+
         toolbar();
         if (didViewInventory == true)
         {

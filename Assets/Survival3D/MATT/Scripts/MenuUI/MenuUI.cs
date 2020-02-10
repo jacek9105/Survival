@@ -35,7 +35,7 @@ public class MenuUI : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyUp (KeyCode.Escape) && equipment.didViewInventory == false && Crafting.didViewCrafting == false) { //Jeżeli naciśnięto klawisz "Escape"
+        if (Input.GetKeyUp (KeyCode.Escape) && equipment.didViewInventory == false && Crafting.didViewCrafting == false && equipment.firstDesrciption == false) { //Jeżeli naciśnięto klawisz "Escape"
 			manuUI.enabled = !manuUI.enabled;//Ukrycie/pokazanie menu.
                   
 
@@ -59,6 +59,8 @@ public class MenuUI : MonoBehaviour {
         {
             equipment.didViewInventory = false;
             Crafting.didViewCrafting = false;
+            equipment.firstDesrciption = false;
+            equipment.firstDesrciption2 = false;
         }
 
 
