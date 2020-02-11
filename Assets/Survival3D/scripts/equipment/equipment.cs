@@ -60,6 +60,11 @@ public class equipment : MonoBehaviour
             {
                 Crafting.didViewCrafting = false;
                 Cursor.lockState = CursorLockMode.None;//Odblokowanie kursora myszy.
+                Time.timeScale = 0;
+            }
+            if (didViewInventory == false)
+            {
+                Time.timeScale = 1;
             }
         }
 
@@ -183,7 +188,7 @@ public class equipment : MonoBehaviour
         int i = 0;
         GUI.Box(new Rect(Screen.width * 0.10f, Screen.height * 0.05f, Screen.width * 0.28f, Screen.height * 0.01f), "INVENTORY", skin.GetStyle("inventoryText"));
         GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("inventoryInfo"));
-
+        
         for (int x=0; x<numberSocketsX; x++)
         {
             for(int y=0; y<numberSocketsY; y++)
