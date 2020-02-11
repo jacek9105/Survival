@@ -9,17 +9,14 @@ public class equipment : MonoBehaviour
     public List<Object> listItemToolbar = new List<Object>();
 
     public Object objectDragg;
+
     static public bool didViewInventory;
-   
+    static public bool didViewFirstInfo;
 
     //public WeaponSwitch weaponSwitch;
-
     bool didObjectDragg;
     bool doShare;
-    static public bool firstDesrciption2;
     static public bool firstDesrciption;
-
-
     int numberSocketsX;
     int numberSocketsY;
     int numberSocketsToolbar =5;
@@ -43,9 +40,8 @@ public class equipment : MonoBehaviour
         numberSocketsX = 5;
         numberSocketsY = 4;
         timeUseObject = 0;
-        firstDesrciption = false;
-        firstDesrciption2 = true;
-
+        firstDesrciption = true;
+        didViewFirstInfo = false;
 
     }
 
@@ -58,8 +54,8 @@ public class equipment : MonoBehaviour
         {
             didViewInventory = !didViewInventory;
             Cursor.visible = didViewInventory;//Ukrycie pokazanie kursora myszy.
-            firstDesrciption = false;
-            
+            didViewFirstInfo = false;
+
             if (didViewInventory == true)
             {
                 Crafting.didViewCrafting = false;
@@ -81,13 +77,14 @@ public class equipment : MonoBehaviour
             discardItem();
         }
 
-        if (Input.GetKeyUp(KeyCode.E) && firstDesrciption == false)
+        if (Input.GetKeyUp(KeyCode.E) && firstDesrciption == true)
         {
             for (int i = 0; i < listOwnedItem.Count; i++)
             {
                 if (listOwnedItem[i].id != 0)
                 {
-                    firstDesrciption = true;
+                    didViewFirstInfo = true;
+                    firstDesrciption = false;
                 }
             }
 
@@ -121,10 +118,9 @@ public class equipment : MonoBehaviour
 
     void OnGUI()
     {
-        if(firstDesrciption == true && firstDesrciption2 == true)
+        if(didViewFirstInfo == true)
         {
             GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("firstDescription"));
-
         }
      
 
@@ -186,6 +182,7 @@ public class equipment : MonoBehaviour
     {
         int i = 0;
         GUI.Box(new Rect(Screen.width * 0.10f, Screen.height * 0.05f, Screen.width * 0.28f, Screen.height * 0.01f), "INVENTORY", skin.GetStyle("inventoryText"));
+        GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("inventoryInfo"));
 
         for (int x=0; x<numberSocketsX; x++)
         {
@@ -200,6 +197,8 @@ public class equipment : MonoBehaviour
                     GUI.Box(slotLocation, listOwnedItem[i].stackedQuantity.ToString(), skin.GetStyle("stackedQuantityStyle"));
 
                 }
+
+
 
                 //Dzielenie ilości w stacku
                 if (Input.GetKey(KeyCode.LeftShift) && slotLocation.Contains(Event.current.mousePosition) && listOwnedItem[i].stackedQuantity > 1 && Event.current.type == EventType.MouseDrag && didObjectDragg == false)
