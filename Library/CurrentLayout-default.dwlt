@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 613, y: 394}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 328
+  controlID: 1003
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 394}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 329
+  controlID: 951
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -358,9 +358,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e390000
+      m_SelectedIDs: c65e0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 5afbffff
+      m_ExpandedIDs: 5afbfffff44e00007a5300009e540000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -548,19 +548,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/EffectExamples
+    - Assets/Survival3D/scripts/Minimap
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/EffectExamples
+  - Assets/Survival3D/scripts/Minimap
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\MATT\Desktop\Survival3D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: 34330000
-    m_LastClickedID: 13108
+    scrollPos: {x: 0, y: 360}
+    m_SelectedIDs: 3e350000
+    m_LastClickedID: 13630
     m_ExpandedIDs: 00000000003200004a3400003e3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 41.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 171
