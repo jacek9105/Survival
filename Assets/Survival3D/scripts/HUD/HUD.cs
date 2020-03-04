@@ -21,11 +21,16 @@ public class HUD : MonoBehaviour
 
     static public float maxStamina;
     static public float actualStamina;
+    public GameObject staminaBar2;
 
     public GameObject hpBar;
+    public GameObject hpBar2;
     public GameObject desireBar;
+    public GameObject desireBar2;
     public GameObject hungerBar;
+    public GameObject hungerBar2;
     public GameObject staminaBar;
+
 
     [Header("DamageScreen")]
     public Color damageColor;
@@ -56,18 +61,30 @@ public class HUD : MonoBehaviour
         actualHP = Mathf.Clamp(actualHP, 0, 100);
         actualHunger = Mathf.Clamp(actualHunger, 0, 100);
         actualStamina = Mathf.Clamp(actualStamina, 0, 100);
+        hpBar2.transform.localScale = new Vector3(Screen.width * 0.07f, Screen.height * 0.10f, 0);
+        hpBar2.transform.position = new Vector3(Screen.width * 0.07f, Screen.height * 0.05f, 1);
 
         hpBar.transform.localScale = new Vector3(Screen.width*0.07f*actualHP/maxHP, Screen.height*0.10f, 0);
         hpBar.transform.position = new Vector3(Screen.width * 0.07f, Screen.height * 0.05f, 1);
 
+        hungerBar2.transform.localScale = new Vector3(Screen.width * 0.07f , Screen.height * 0.10f, 0);
+        hungerBar2.transform.position = new Vector3(Screen.width * 0.13f, Screen.height * 0.05f, 1);
         hungerBar.transform.localScale = new Vector3(Screen.width * 0.07f * actualHunger / maxHunger, Screen.height * 0.10f, 0);
         hungerBar.transform.position = new Vector3(Screen.width * 0.13f, Screen.height * 0.05f, 1);
+        desireBar2.transform.localScale = new Vector3(Screen.width * 0.07f , Screen.height * 0.10f, 0);
+        desireBar2.transform.position = new Vector3(Screen.width * 0.19f, Screen.height * 0.05f, 1);
 
         desireBar.transform.localScale = new Vector3(Screen.width * 0.07f * actualDesire / maxDesire, Screen.height * 0.10f, 0);
         desireBar.transform.position = new Vector3(Screen.width * 0.19f, Screen.height * 0.05f, 1);
 
+        staminaBar2.transform.localScale = new Vector3(Screen.width * 0.07f, Screen.height * 0.10f, 0);
+        staminaBar2.transform.position = new Vector3(Screen.width * 0.25f, Screen.height * 0.05f, 1);
+
+
         staminaBar.transform.localScale = new Vector3(Screen.width * 0.07f * actualStamina / maxStamina, Screen.height * 0.10f, 0);
         staminaBar.transform.position = new Vector3(Screen.width * 0.25f, Screen.height * 0.05f, 1);
+
+
 
         actualDesire -= 0.2f * Time.deltaTime;
         actualHunger -= 0.1f * Time.deltaTime;
