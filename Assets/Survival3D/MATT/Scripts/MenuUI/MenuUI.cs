@@ -34,6 +34,11 @@ public class MenuUI : MonoBehaviour {
             quitMenu.enabled = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Application.LoadLevel(0);
+        }
+
 
         if (Input.GetKeyUp (KeyCode.Escape) && equipment.didViewInventory == false && Crafting.didViewCrafting == false && equipment.didViewFirstInfo == false) { //Jeżeli naciśnięto klawisz "Escape"
 			manuUI.enabled = !manuUI.enabled;//Ukrycie/pokazanie menu.
