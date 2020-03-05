@@ -333,7 +333,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-                HUD.actualHunger -= 25;
+                HUD.actualHP -= 25;
             }
             if(id==5)
             {
@@ -366,7 +366,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-            HUD.actualHunger -= 25;
+                HUD.actualHP -= 25;
             }
             if (id == 5)
             {
@@ -419,7 +419,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-                HUD.actualHunger -= 25;
+                HUD.actualHP -= 25;
             }
             if (id == 5)
             {
@@ -452,7 +452,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-                HUD.actualHunger -= 25;
+                HUD.actualHP -= 25;
             }
             if (id == 5)
             {
