@@ -327,7 +327,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-                if (HUD.actualHunger <= 75) { HUD.actualHunger += 15; } else { HUD.actualHunger = 100; }
+                HUD.actualHunger -= 25;
             }
             if(id==5)
             {
@@ -345,6 +345,10 @@ public class equipment : MonoBehaviour
             {
                 if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
             }
+            if (id == 13)
+            {
+                if (HUD.actualHunger <= 75) { HUD.actualHunger += 15; } else { HUD.actualHunger = 100; }
+            }
         }
         else if (didDelete == true && listOwnedItem[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
         {
@@ -356,7 +360,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+            HUD.actualHunger -= 25;
             }
             if (id == 5)
             {
@@ -373,6 +377,10 @@ public class equipment : MonoBehaviour
             if (id == 12)
             {
                 if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
+            }
+            if (id == 13)
+            {
+                if (HUD.actualHunger <= 85) { HUD.actualHunger += 15; } else { HUD.actualHunger = 100; }
             }
         }
     }
@@ -405,7 +413,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+                HUD.actualHunger -= 25;
             }
             if (id == 5)
             {
@@ -422,6 +430,10 @@ public class equipment : MonoBehaviour
             if (id == 12)
             {
                 if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
+            }
+            if (id == 13)
+            {
+                if (HUD.actualHunger <= 85) { HUD.actualHunger += 15; } else { HUD.actualHunger = 100; }
             }
         }
         else if (didDelete == true && listItemToolbar[slotNumber].stackedQuantity > 1 && timeUseObject + 0.1f < DayNightCycle.actualTime)
@@ -434,7 +446,7 @@ public class equipment : MonoBehaviour
             }
             if (id == 4)
             {
-                if (HUD.actualHunger <= 75) { HUD.actualHunger += 25; } else { HUD.actualHunger = 100; }
+                HUD.actualHunger -= 25;
             }
             if (id == 5)
             {
@@ -451,6 +463,10 @@ public class equipment : MonoBehaviour
             if (id == 12)
             {
                 if (HUD.actualDesire <= 75) { HUD.actualDesire += 25; } else { HUD.actualDesire = 100; }
+            }
+            if (id == 13)
+            {
+                if (HUD.actualHunger <= 85) { HUD.actualHunger += 15; } else { HUD.actualHunger = 100; }
             }
         }
     }

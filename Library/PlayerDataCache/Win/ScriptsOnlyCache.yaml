@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - AQUAS_Lite.AQUAS_Lite_Reflection
     - AnimationController
@@ -12,6 +14,8 @@ ScriptsOnlyBuild:
     - MenuUI
     - MinimapScript
     - PigAxe
+    - Readme
+    - Restart
     - Tree_Felling
     - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     - WeaponSwitch
@@ -38,33 +42,17 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.Experimental.TerrainAPI.BillowNoise
-    - UnityEditor.Experimental.TerrainAPI.BridgeTool
-    - UnityEditor.Experimental.TerrainAPI.CloneBrushTool
-    - UnityEditor.Experimental.TerrainAPI.ContrastTool
     - UnityEditor.Experimental.TerrainAPI.FbmFractalType
-    - UnityEditor.Experimental.TerrainAPI.MeshStampTool
     - UnityEditor.Experimental.TerrainAPI.NoiseBlitShaderGenerator
     - UnityEditor.Experimental.TerrainAPI.NoiseFillShaderGenerator
-    - UnityEditor.Experimental.TerrainAPI.NoiseHeightTool
     - UnityEditor.Experimental.TerrainAPI.NoneFractalType
-    - UnityEditor.Experimental.TerrainAPI.PaintHeightTool
-    - UnityEditor.Experimental.TerrainAPI.PaintTextureTool
     - UnityEditor.Experimental.TerrainAPI.PerlinNoise
     - UnityEditor.Experimental.TerrainAPI.RidgeNoise
-    - UnityEditor.Experimental.TerrainAPI.SetHeightTool
-    - UnityEditor.Experimental.TerrainAPI.SharpenPeaksTool
-    - UnityEditor.Experimental.TerrainAPI.SlopeFlattenTool
-    - UnityEditor.Experimental.TerrainAPI.SmoothHeightTool
-    - UnityEditor.Experimental.TerrainAPI.StampTool
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
-    - UnityEditor.Experimental.TerrainAPI.TerraceErosion
-    - UnityEditor.Experimental.TerrainAPI.ThermalErosionTool
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
-    - UnityEditor.Experimental.TerrainAPI.WindErosionTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -179,21 +167,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11768}
+      Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 11896}
+      Script: {instanceID: 11770}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 12218}
+      Script: {instanceID: 12082}
     - Class: 114
-      Script: {instanceID: 12232}
+      Script: {instanceID: 12220}
     - Class: 114
-      Script: {instanceID: 12296}
+      Script: {instanceID: 12234}
     - Class: 114
-      Script: {instanceID: 43426}
+      Script: {instanceID: 12298}
+    - Class: 114
+      Script: {instanceID: 23242}
+    - Class: 114
+      Script: {instanceID: 23522}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -1145,7 +1137,7 @@ ScriptsOnlyBuild:
     className: AlphaButtonClickMask
   - hash:
       serializedVersion: 2
-      Hash: cbe001b1de8c616e5bfbbb55280c53e2
+      Hash: 50c82289494a931a07146cf303b1b601
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HUD
@@ -1239,6 +1231,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExtinguishableFire
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Restart
   - hash:
       serializedVersion: 2
       Hash: 718ef0ded913ba15da8a97ccf24793ce
@@ -1494,4 +1492,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Survival3D/mainScene.unity
-  playerPath: C:/Users/MATT/Desktop/test_survival_v1.1/Survival3D.exe
+  playerPath: F:/GitHub/GRA/Survival3D.exe
