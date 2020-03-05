@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
     - AQUAS_Lite.AQUAS_Lite_Reflection
     - AnimationController
@@ -14,7 +12,6 @@ ScriptsOnlyBuild:
     - MenuUI
     - MinimapScript
     - PigAxe
-    - Readme
     - Restart
     - Tree_Felling
     - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
@@ -53,6 +50,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -183,9 +181,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12298}
     - Class: 114
-      Script: {instanceID: 23242}
+      Script: {instanceID: 23264}
     - Class: 114
-      Script: {instanceID: 23522}
+      Script: {instanceID: 23544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -1011,7 +1009,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: e4c5b17547e36e78b2f874c98f51c47d
+      Hash: ddb080fc45557c3d645cec3a53859e91
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuUI

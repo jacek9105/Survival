@@ -104,10 +104,11 @@ public class HUD : MonoBehaviour
             actualHP -= 3f * Time.deltaTime;
 
         }
-        else if(actualHP < maxHP)
+        else if(actualHP < maxHP && actualHP > 1)
         {
             actualHP += 1 * Time.deltaTime;
         }
+
 
 
         if (Fpsc.m_IsWalking == false)
@@ -135,12 +136,14 @@ public class HUD : MonoBehaviour
        
 
 
-
+        /*
         if (actualHP <= 0.1)
         {
+
+
             Destroy(gameObject);
             // Matt dodaj okienko które pozwloić kliknąć koniec gry czy coś takiego i wróci do ekranu pierwszego.
-        }
+        }*/
 
         isTakingDamage = false;
     }

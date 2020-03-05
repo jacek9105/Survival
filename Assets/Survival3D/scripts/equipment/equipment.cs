@@ -69,6 +69,7 @@ public class equipment : MonoBehaviour
         }
 
 
+
         if (Input.GetKeyUp(KeyCode.Alpha1)) { useObjectToolbar(listItemToolbar[0].id, 0, !listItemToolbar[0].isWeapon, listItemToolbar[0].isWeapon);}
         if (Input.GetKeyUp(KeyCode.Alpha2)) { useObjectToolbar(listItemToolbar[1].id, 1, !listItemToolbar[1].isWeapon, listItemToolbar[1].isWeapon); }
         if (Input.GetKeyUp(KeyCode.Alpha3)) { useObjectToolbar(listItemToolbar[2].id, 2, !listItemToolbar[2].isWeapon, listItemToolbar[2].isWeapon); }
@@ -125,9 +126,14 @@ public class equipment : MonoBehaviour
     {
         if(didViewFirstInfo == true)
         {
-            GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("firstDescription"));
+           GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("firstDescription"));
         }
-     
+
+        if (HUD.actualHP < 0.1)
+        {
+            GUI.Box(new Rect(Screen.width * 0.4f, Screen.height * 0.4f, Screen.width * 0.4f, Screen.height * 0.25f), "", skin.GetStyle("gameOver"));
+        }
+
 
         toolbar();
         if (didViewInventory == true)
