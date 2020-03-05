@@ -23,6 +23,8 @@ public class Database : MonoBehaviour
         itemList.Add(new Object(11, "sail", "Needed to built rescue boat", false, 1));
         itemList.Add(new Object(12, "waterbottle", "Bottle of water", false, 1));
         itemList.Add(new Object(13, "mushroom2", "Grzyb jadalny", false, 1));
+        itemList.Add(new Object(14, "matches", "Needed to ccraft torch", false, 1));
+        itemList.Add(new Object(15, "torch", "Torch", false, 1));
 
 
         // nulle albo cos dodajemy albo wyrzucamy musi byc tyle samo pozycji ile jest miejsca w numbersocket w skrypcie crafting
@@ -30,7 +32,7 @@ public class Database : MonoBehaviour
         itemCraftingList.Add(new Object(3, "bottle", "Butelka z wodą", false, 1));
         itemCraftingList.Add(new Object(10, "rescueboat", "Rescue boat", false, 1));
         itemCraftingList.Add(new Object(8, "fak", "First aid kit - +25 HP", false, 1));
-        itemCraftingList.Add(new Object(0, "null", "null", false, 1));
+        itemCraftingList.Add(new Object(15, "torch", "Troch", false, 1));
         itemCraftingList.Add(new Object(0, "null", "null", false, 1));
         itemCraftingList.Add(new Object(0, "null", "null", false, 1));
         itemCraftingList.Add(new Object(0, "null", "null", false, 1));

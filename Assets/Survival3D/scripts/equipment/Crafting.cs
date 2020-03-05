@@ -8,6 +8,7 @@ public class Crafting : MonoBehaviour
     public equipment equipment;
     public GUISkin skin;
     public GameObject raftsail;
+    
     int numberSocketsX;
     int numberSocketsY;
     static public bool didViewCrafting;
@@ -139,6 +140,11 @@ public class Crafting : MonoBehaviour
         {
             info = "Needed items:" + "\n" + "2x meal";
         }
+        if (id == 15) // apteczka
+        {
+            info = "Needed items:" + "\n" + "1x matches" + "\n" + "2x trunk";
+        }
+
 
     }
     
@@ -383,47 +389,107 @@ public class Crafting : MonoBehaviour
         }
 
 
+        //--------------------------===================TORCH CRAFTING=================---------------------
 
-
-
-
-
-        /*
-        --------------------=======================TWORZYMY KOLEJNY ITEM====================----------------
-        if (id == 3) // id == kolejnu id z itemcrafting list z database 
+        if (id == 15)
         {
-            CheckItem(2); //id itemu z itemlist z database
+            CheckItem(2, 14, 0, 0, 2, 1, 0, 0); // podajemy ile przedmiotow ktorego rodzaju potrzebujemy!! wywolujemy funkcje checkitem!!
             if (canCraft == true) //&& craftedItem == false
             {
-                for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                addItem(15);
+                      
+                for (int i = 0; i < 2; i++)  // musimy wykonac nastepny for tyle razy ile potrzebujemy przedmiotow!! i musi być mniejsze od ilosci itemow ktore potrzebujemy
                 {
-                    if (equipment.listOwnedItem[x].id == 2)
+                    for (int x = 0; x < equipment.listOwnedItem.Count; x++)
                     {
-                        if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                        if (equipment.listOwnedItem[x].id == 2)
                         {
-                            equipment.listOwnedItem[x].stackedQuantity -= 1;
-                            canCraft = false;
-                            //craftedItem = true;
-                            addItem(3);
-                            break;
+                            if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                            {
+                                equipment.listOwnedItem[x].stackedQuantity -= 1;
+                                canCraft = false;
+                                //craftedItem = true;
+                                break;
+                            }
+                            else
+                            if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                            {
+                                equipment.listOwnedItem[x] = new Object();
+                                canCraft = false;
+                                //craftedItem = true;
+
+                                break;
+                            }
                         }
-                        else
-                        if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                    }
+                }
+                for (int i = 0; i < 1; i++)  // musimy wykonac nastepny for tyle razy ile potrzebujemy przedmiotow!! i musi być mniejsze od ilosci itemow ktore potrzebujemy
+                {
+                    for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                    {
+                        if (equipment.listOwnedItem[x].id == 14)
                         {
-                            equipment.listOwnedItem[x] = new Object();
-                            canCraft = false;
-                            //craftedItem = true;
-                            addItem(3);
-                            break;
+                            if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                            {
+                                equipment.listOwnedItem[x].stackedQuantity -= 1;
+                                canCraft = false;
+                                //craftedItem = true;
+                                break;
+                            }
+                            else
+                            if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                            {
+                                equipment.listOwnedItem[x] = new Object();
+                                canCraft = false;
+                                //craftedItem = true;
+
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
-        */
 
 
-    }
+
+
+                /*
+                --------------------=======================TWORZYMY KOLEJNY ITEM====================----------------
+                if (id == 3) // id == kolejnu id z itemcrafting list z database 
+                {
+                    CheckItem(2); //id itemu z itemlist z database
+                    if (canCraft == true) //&& craftedItem == false
+                    {
+                        for (int x = 0; x < equipment.listOwnedItem.Count; x++)
+                        {
+                            if (equipment.listOwnedItem[x].id == 2)
+                            {
+                                if (equipment.listOwnedItem[x].stackedQuantity > 1)
+                                {
+                                    equipment.listOwnedItem[x].stackedQuantity -= 1;
+                                    canCraft = false;
+                                    //craftedItem = true;
+                                    addItem(3);
+                                    break;
+                                }
+                                else
+                                if (equipment.listOwnedItem[x].stackedQuantity == 1)
+                                {
+                                    equipment.listOwnedItem[x] = new Object();
+                                    canCraft = false;
+                                    //craftedItem = true;
+                                    addItem(3);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                */
+
+
+            }
 
     void CheckItem(int id1, int id2, int id3 = 0, int id4 = 0, float count1 = 1, float count2 = 0, float count3 = 0, float count4=0) //tyle zmiennych ile id w craftingu database
     {
