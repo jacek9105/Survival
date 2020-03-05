@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Survival3D/mainScene.unity
+    guid: 1e975f49a5500a34fb79000f3313016a
+  - enabled: 1
+    path: Assets/Survival3D/endScene.unity
+    guid: 5a076a17bd6293f4abe0efa5fb9a5cd8
   m_configObjects: {}
