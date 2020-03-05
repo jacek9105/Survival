@@ -6,17 +6,20 @@ public class WeaponSwitch : MonoBehaviour
 {
 
     static public int weaponSelected;
-    static public bool isAvaible1, isAvaible2, didChange;
+    static public bool isAvaible1, isAvaible2, didChange, isAvaible3;
+    static public bool viewTorch = false;
 
     [SerializeField]
-    GameObject primary, secondary, melee;
+    GameObject primary, secondary, melee, torch;
 
     void Start()
     {
         SwapWeapon(3);
         isAvaible1 = false;
         isAvaible2 = false;
+        isAvaible3 = false;
         didChange = false;
+        torch.SetActive(viewTorch);
 
     }
 
@@ -58,6 +61,11 @@ public class WeaponSwitch : MonoBehaviour
                 SwapWeapon(3);
             }
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            viewTorch = !viewTorch;
+            torch.SetActive(viewTorch);
+        }
 
 
 
@@ -94,8 +102,8 @@ public class WeaponSwitch : MonoBehaviour
       
 
             weaponSelected = 3;
-
-          
         }
+
+
     }
 }

@@ -6804,6 +6804,7 @@ MonoBehaviour:
   primary: {fileID: 1610291144}
   secondary: {fileID: 231566339}
   melee: {fileID: 533786085}
+  torch: {fileID: 1960179373}
 --- !u!114 &298123867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28552,6 +28553,7 @@ MonoBehaviour:
   quitMenu: {fileID: 507571486}
   btnStart: {fileID: 204198084}
   btnExit: {fileID: 1969506304}
+  skin: {fileID: 0}
 --- !u!1001 &1135147870
 PrefabInstance:
   m_ObjectHideFlags: 0
