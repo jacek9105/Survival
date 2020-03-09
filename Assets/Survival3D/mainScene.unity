@@ -4204,7 +4204,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.54901963, g: 0.4666667, b: 0.3372549, a: 1}
     m_HighlightedColor: {r: 0.3529412, g: 0.35686275, b: 0.18431373, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0, g: 0.5, b: 0.2998538, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -22800,7 +22800,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.54901963, g: 0.4666667, b: 0.3372549, a: 1}
     m_HighlightedColor: {r: 0.3529412, g: 0.35686275, b: 0.18431373, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0, g: 0.5019608, b: 0.3019608, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -39040,7 +39040,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503754609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -49838,7 +49838,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.54901963, g: 0.4666667, b: 0.3372549, a: 1}
     m_HighlightedColor: {r: 0.3529412, g: 0.35686275, b: 0.18431373, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0, g: 0.5019608, b: 0.3019608, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
