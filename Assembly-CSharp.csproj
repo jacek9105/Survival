@@ -84,6 +84,7 @@
      <Compile Include="Assets\Survival3D\MATT\Scripts\Endscene.cs" />
      <Compile Include="Assets\Survival3D\MATT\Scripts\MenuUI\MenuUI.cs" />
      <Compile Include="Assets\Survival3D\MATT\Scripts\Restart.cs" />
+     <Compile Include="Assets\Survival3D\MATT\Scripts\UnlockMouse.cs" />
      <Compile Include="Assets\Survival3D\MATT\Scripts\WeaponsSwitch\WeaponSwitch.cs" />
      <Compile Include="Assets\Survival3D\MATT\Scripts\Winscene.cs" />
      <Compile Include="Assets\Survival3D\scripts\AI\enemyAI.cs" />

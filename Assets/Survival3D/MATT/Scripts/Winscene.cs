@@ -15,5 +15,9 @@ public class Winscene : MonoBehaviour
         Debug.Log("Exit button pressed");
         Application.Quit();
     }
+
+    public static bool lockCursor = false;
+
+
 }
 
