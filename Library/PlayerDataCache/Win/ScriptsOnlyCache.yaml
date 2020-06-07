@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - AQUAS_Lite.AQUAS_Lite_Reflection
     - AnimationController
@@ -13,6 +15,7 @@ ScriptsOnlyBuild:
     - MenuUI
     - MinimapScript
     - PigAxe
+    - Readme
     - Restart
     - Tree_Felling
     - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
@@ -52,7 +55,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -95,15 +97,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10616}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11772}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 12168}
+      Script: {instanceID: 12170}
     - Class: 114
-      Script: {instanceID: 12238}
+      Script: {instanceID: 12240}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,55 +198,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10616}
     - Class: 114
-      Script: {instanceID: 10986}
-    - Class: 114
       Script: {instanceID: 10988}
     - Class: 114
-      Script: {instanceID: 11004}
+      Script: {instanceID: 10990}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 11006}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11060}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11216}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11218}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 11612}
+      Script: {instanceID: 11526}
     - Class: 114
-      Script: {instanceID: 11656}
+      Script: {instanceID: 11614}
     - Class: 114
-      Script: {instanceID: 11666}
+      Script: {instanceID: 11658}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11668}
     - Class: 114
-      Script: {instanceID: 11772}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11900}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 12084}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12224}
+      Script: {instanceID: 12086}
     - Class: 114
-      Script: {instanceID: 12238}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 12302}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 23110}
+      Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 23394}
+      Script: {instanceID: 23408}
+    - Class: 114
+      Script: {instanceID: 23680}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -882,6 +884,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMoveAndRotate
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UnlockMouse
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1560,12 +1568,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UnlockMouse
   platform: 5
   scenePathNames:
   - Assets/Survival3D/mainScene.unity
