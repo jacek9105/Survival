@@ -126,23 +126,23 @@ public class Crafting : MonoBehaviour
 
         if (id == 3) // butelka
         {
-            info = "Needed items:" + "\n" + "trunk";
+            info = "Wymagane przedmioty" + "\n" + "kłoda";
         }
         if (id == 1) // axe
         {
-            info = "Needed items:" + "\n" + "trunk" + "\n" + "bottle";
+            info = "Wymagane przedmioty:" + "\n" + "kłoda" + "\n" + "butelka";
         }
         if(id == 10) // rescue boat
         {
-            info = "Needed items:" + "\n" + "3x trunks" + "\n" + "2x ropes" + "\n" + "1x sail";
+            info = "Wymagane przedmioty:" + "\n" + "3x kłoda" + "\n" + "2x lipa" + "\n" + "1x żagiel";
         }
         if (id == 8) // apteczka
         {
-            info = "Needed items:" + "\n" + "2x meal";
+            info = "Wymagane przedmioty:" + "\n" + "2x mięso";
         }
         if (id == 15) // apteczka
         {
-            info = "Needed items:" + "\n" + "1x matches" + "\n" + "2x trunk";
+            info = "Wymagane przedmioty:" + "\n" + "1x zapałki" + "\n" + "2x kłoda";
         }
 
 
