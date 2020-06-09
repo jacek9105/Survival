@@ -134,7 +134,7 @@ public class Crafting : MonoBehaviour
         }
         if(id == 10) // rescue boat
         {
-            info = "Wymagane przedmioty:" + "\n" + "3x kłoda" + "\n" + "2x lipa" + "\n" + "1x żagiel";
+            info = "Wymagane przedmioty:" + "\n" + "3x kłoda" + "\n" + "2x lina" + "\n" + "1x żagiel";
         }
         if (id == 8) // apteczka
         {

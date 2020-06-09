@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 613, y: 394}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 6878
+  controlID: 150
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 345}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9295ffffc695ffff4697ffff7a97ffff4cd1ffff78ce00005ccf0000ced30000
+      m_ExpandedIDs: 52d3ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 394}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 6879
+  controlID: 99
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,9 +312,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.14328244, y: 0.62987554, z: -0.11970748, w: 0.75392115}
   m_Size:
-    m_Target: 5.1023436
+    m_Target: 11.798328
     speed: 2
-    m_Value: 5.1023436
+    m_Value: 11.798328
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -432,20 +432,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Standard Assets/Fonts/OpenSans
+    - Assets/EffectExamples
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Standard Assets/Fonts/OpenSans
+  - Assets/EffectExamples
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: F:\GitHub\Survival3D\Survival3D
+  m_LastProjectPath: D:\Unity\GIT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 210}
-    m_SelectedIDs: ae650000
-    m_LastClickedID: 26030
-    m_ExpandedIDs: 00000000c64d0000364e0000f852000048550000685900006a590000b060000080610000166200007265000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: e04f0000
+    m_LastClickedID: 20448
+    m_ExpandedIDs: 00000000b04e00001e4f0000b6530000ea550000de590000e0590000da600000a6610000326200007865000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -473,7 +473,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c64d0000364e0000f852000048550000685900006a590000b060000080610000166200007265000000ca9a3b
+    m_ExpandedIDs: 00000000b04e00001e4f0000b6530000ea550000de590000e0590000da600000a66100003262000078650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,8 +498,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f6470000
-    m_LastClickedInstanceID: 18422
+    m_SelectedInstanceIDs: 98550000
+    m_LastClickedInstanceID: 21912
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 2cad000000000000
     m_RenameOverlay:
@@ -617,5 +617,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 18422
-  m_LastVerticalScrollValue: 414
+  m_LastInspectedObjectInstanceID: 21912
+  m_LastVerticalScrollValue: 0
