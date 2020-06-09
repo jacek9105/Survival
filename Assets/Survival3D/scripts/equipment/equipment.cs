@@ -126,7 +126,7 @@ public class equipment : MonoBehaviour
     {
         if(didViewFirstInfo == true)
         {
-           GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("firstDescription"));
+           GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.3f, Screen.height * 0.7f), "", skin.GetStyle("firstDescription"));
         }
 
         if (HUD.actualHP < 0.1)
@@ -193,7 +193,7 @@ public class equipment : MonoBehaviour
     {
         int i = 0;
         GUI.Box(new Rect(Screen.width * 0.10f, Screen.height * 0.05f, Screen.width * 0.28f, Screen.height * 0.01f), "INVENTORY", skin.GetStyle("inventoryText"));
-        GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.45f, Screen.height * 0.9f), "", skin.GetStyle("inventoryInfo"));
+        GUI.Box(new Rect(Screen.width * 0.5f, Screen.height * 0.05f, Screen.width * 0.3f, Screen.height * 0.7f), "", skin.GetStyle("inventoryInfo"));
         
         for (int x=0; x<numberSocketsX; x++)
         {

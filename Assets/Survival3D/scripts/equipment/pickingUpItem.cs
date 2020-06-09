@@ -86,7 +86,7 @@ public class pickingUpItem : MonoBehaviour
     {
         if (canLift == true &&  itemToPick != null)//Database.itemList[i].id < 20)
         {
-            GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 200, 200), "Press e to lift item", skin.GetStyle("Lift"));
+            GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 200, 200), "Naciśnij \"E\" aby podnieść", skin.GetStyle("Lift"));
         }
     }
 }

@@ -86,8 +86,8 @@ public class HUD : MonoBehaviour
 
 
 
-        actualDesire -= 0.2f * Time.deltaTime;
-        actualHunger -= 0.1f * Time.deltaTime;
+        actualDesire -= 0.1f * Time.deltaTime;
+        actualHunger -= 0.05f * Time.deltaTime;
 
         if(isTakingDamage)
         {

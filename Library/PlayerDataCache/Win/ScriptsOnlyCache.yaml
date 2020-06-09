@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
     - AQUAS_Lite.AQUAS_Lite_Reflection
     - AnimationController
@@ -15,7 +13,6 @@ ScriptsOnlyBuild:
     - MenuUI
     - MinimapScript
     - PigAxe
-    - Readme
     - Restart
     - Tree_Felling
     - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
@@ -55,6 +52,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -244,9 +242,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 23408}
+      Script: {instanceID: 29872}
     - Class: 114
-      Script: {instanceID: 23680}
+      Script: {instanceID: 30144}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -1572,4 +1570,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Survival3D/mainScene.unity
   - Assets/Survival3D/endScene.unity
-  playerPath: C:/Users/MATT/Desktop/survival_v2/Survival3D.exe
+  playerPath: F:/GitHub/Survival3D/Survival3D_062020/Survival3D.exe
